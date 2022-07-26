@@ -1,7 +1,3 @@
-const capital = "Capital";
-const cba = "Cordoba";
-const otraZona = "Resto del pais";
-
 const costoDeEnvioCompleto = 1290;
 const costoDeEnvioMitad = costoDeEnvioCompleto/2;
 const costoDeEnvioCero=0;
@@ -9,10 +5,6 @@ const costoDeEnvioCero=0;
 const remera = "Remera";
 const jeans = "Jeans";
 const zapatillas = "Zapatillas";
-
-const unaCuota = "Una cuota s/interes";
-const tresCuotas = "Tres cuotas s/interes";
-const seisCuotas =  "seis cuotas c/interes 21%";
 
 class Usuario {
     constructor (nombre, ciudad, telefono){
@@ -23,28 +15,51 @@ class Usuario {
     }
 }
 
-let nombre = prompt("hola, ingresa tu nombre porfavor");
-let ciudad = prompt("selecciona tu ciudad: \n a) Capital \n b) Cordoba \n c) Resto del pais");
-let telefono = prompt ("ingresa tu telefono");
-let tipoDeEnvio = prompt("selecciona tipo de entrega: \n a) retiro en Correo \n b) Retiro en tienda \n c) Entrega a domicilio");
+const nombre = prompt("hola, ingresa tu nombre porfavor");
+const ciudad = prompt("Ingresa tu ciudad");
+const telefono = prompt ("ingresa tu telefono");
+const tipoDeEnvio = prompt("selecciona tipo de entrega: \n a) retiro en tienda \n b) Retiro en correo \n c) Entrega a domicilio");
 
-let usuario1 = new Usuario(nombre, ciudad, telefono, tipoDeEnvio);
+const usuario1 = new Usuario(nombre, ciudad, telefono, tipoDeEnvio);
 console.log(usuario1);
 
-/*class Compra{
-    constructor(producto1, producto2, producto3){
-        this.producto1=producto
-        this.producto2=producto
-        this.producto3=producto
-    }
-}
-*/
-
 for (let i= 1; i<5; i++){
-    let productosSeleccionados= prompt("Selecciona la ropa que vas a comprar \n a) Remera \n b) Jeans \n c) Zapatillas");
+    const productosSeleccionados= prompt("Selecciona la ropa que vas a comprar \n a) Remera \n b) Jeans \n c) Zapatillas");
     console.log(productosSeleccionados);
 }
 
-let costoProductos = parseFloat(prompt("ingresa el costo de tu compra"));
+const costoProductos = parseFloat(prompt("ingresa el costo de tu compra"));
+console.log(costoProductos)
 
-let cuotas=(prompt("En cuantas cuotas quieres pagar \n a) Una cuota s/interes \n b) Tres cuotas s/interes \n c) seis cuotas c/interes 21%"));
+let cuotas=prompt("En cuantas cuotas quieres pagar \n a) Una cuota s/interes \n b) Tres cuotas s/interes \n c) seis cuotas c/interes 21%");
+if (cuotas.toLocaleLowerCase() ==="a" && tipoDeEnvio.toLocaleLowerCase() ==="a"){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar es = ${costoProductos};y el costo de envio es = ${costoDeEnvioCero} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+else if (cuotas.toLocaleLowerCase() ==="a" && tipoDeEnvio.toLocaleLowerCase() === "b" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar es = ${costoProductos};y el costo de envio es = ${costoDeEnvioMitad} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+else if (cuotas.toLocaleLowerCase() ==="a" && tipoDeEnvio.toLocaleLowerCase() === "c" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar es = ${costoProductos};y el costo de envio es = ${costoDeEnvioCompleto} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+
+
+else if (cuotas.toLocaleLowerCase() ==="b" && tipoDeEnvio.toLocaleLowerCase() === "a" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar seran 3 cuotas de = ${(costoProductos/3)}; el costo de envio es = ${costoDeEnvioCero} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+else if (cuotas.toLocaleLowerCase() ==="b" && tipoDeEnvio.toLocaleLowerCase() === "b" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar seran 3 cuotas de = ${(costoProductos/3)}; el costo de envio es = ${costoDeEnvioMitad} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+else if (cuotas.toLocaleLowerCase() ==="b" && tipoDeEnvio.toLocaleLowerCase() === "c" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar seran 3 cuotas de = ${(costoProductos/3)}; el costo de envio es = ${costoDeEnvioCompleto} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+
+
+}
+else if (cuotas.toLocaleLowerCase() ==="c" && tipoDeEnvio.toLocaleLowerCase() === "a" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar seran 6 cuotas con un interes de 21%, total por cuota de = ${(((costoProductos*0.21)+costoProductos)/6)}; el costo de envio es = ${costoDeEnvioCero} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+else if (cuotas.toLocaleLowerCase() ==="c" && tipoDeEnvio.toLocaleLowerCase() === "b" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar seran 6 cuotas con un interes de 21%, total por cuota de = ${(((costoProductos*0.21)+costoProductos)/6)}; el costo de envio es = ${costoDeEnvioMitad} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
+else if (cuotas.toLocaleLowerCase() ==="c" && tipoDeEnvio.toLocaleLowerCase() === "c" ){
+    console.log(`Hola ${usuario1.nombre}. El total a pagar seran 6 cuotas con un interes de 21%, total por cuota de = ${(((costoProductos*0.21)+costoProductos)/6)}; el costo de envio es = ${costoDeEnvioCompleto} y sera despachado a tu ciudad = ${usuario1.ciudad}`);
+}
