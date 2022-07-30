@@ -7,9 +7,9 @@ class Usuario {
     }
 }
 
-class producto{
-    constructor(nombre, precio, talle, cantidad){
-        this.nombre=nombre;
+class Producto{
+    constructor(nombreProducto, precio, talle, cantidad){
+        this.nombreProducto=nombreProducto;
         this.precio=precio;
         this.talle=talle;
         this.cantidad=cantidad;
@@ -20,10 +20,10 @@ class producto{
 }
 
 function SolicitarDatos(){
-    let nombre = prompt("hola, ingresa tu nombre porfavor").toLocaleLowerCase();
-    let ciudad = prompt("Ingresa tu ciudad").toLocaleLowerCase();
-    let telefono = parseFloat(prompt ("ingresa tu telefono"));
-    let tipoDeEnvio = prompt("Que tipo de envio prefieres").toLocaleLowerCase();
+    const nombre = prompt("hola, ingresa tu nombre porfavor").toLocaleLowerCase();
+    const ciudad = prompt("Ingresa tu ciudad").toLocaleLowerCase();
+    const telefono = parseFloat(prompt ("ingresa tu telefono"));
+    const tipoDeEnvio = prompt("Que tipo de envio prefieres").toLocaleLowerCase();
     const usuarioCreado = new Usuario(nombre, ciudad, telefono, tipoDeEnvio);
     alert(`hola ${usuarioCreado.nombre}, ya hemos creado tu usuario y tipo de envio`);
     console.log(usuarioCreado);
@@ -37,27 +37,35 @@ const suma = (x) =>{
     return(acumulador)
 }
 
-function SolicitarProductos(){
-    const arrayProductos=[];
-    for (let i=0; i = arrayProductos; i++ ){
-            const verificar = prompt ("ingresa el nombre del producto o escribe fin para terminar de agregar productoss").toLocaleLowerCase();
-        if(verificar == "fin"){
-            break;
-        }
-        else{
-            const nombre = verificar;
-            const precio = prompt("ingresa el precio del producto");
-            const talle = prompt("ingresa el talle que quieres llevar");
-            const cantidad = prompt("ingresa la cantidad de este producto que deseas comprar");
-            arrayProductos.push((new producto(nombre,precio,talle,cantidad,)));
+const arrayProductos = [];
 
-            const result = arrayProductos.filter((el) => el.nombre.includes(nombre));
-            return(arrayProductos)
-        }
+function SolicitarProductos(){
+    const nombreProducto = prompt("ingresa el nombre del producto que quieres comprar").toLocaleLowerCase()
+    const precioProducto= Number(prompt("ingresa el precio del producto"))
+    const talle=prompt("ingresa el talle del producto")
+    const cantidadProducto= Number(prompt("ingresa la cantidad de compra"))
+
+    const nuevoArray = new Producto(nombreProducto,precioProducto,talle,cantidadProducto)
+    arrayProductos.push(nuevoArray)
+    }
+    
+
+function Verificar(){
+    const consulta = prompt ("¿Quieres agregar un producto?");
+    if ( consulta.toLocaleLowerCase() === "si"){
+        SolicitarProductos()
+        Verificar()
+        console.log(arrayProductos)
+    }else{
+        console.log(arrayProductos)
+        
     }
 }
+SolicitarDatos
+Verificar()
 
 
-
-SolicitarDatos();
-SolicitarProductos();
+const nombreProductos = arrayProductos.map((producto) =>{
+    return producto.nombreProducto
+})
+alert(`los productos que vas a comprar son ${nombreProductos}. Gracias por tu compra`)
