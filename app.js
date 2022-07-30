@@ -51,8 +51,8 @@ function SolicitarProductos(){
     
 
 function Verificar(){
-    const consulta = prompt ("¿Quieres agregar un producto?");
-    if ( consulta.toLocaleLowerCase() === "si"){
+    const consulta = prompt ("¿Quieres agregar un producto?").toLocaleLowerCase();
+    if ( consulta === "si"){
         SolicitarProductos()
         Verificar()
         console.log(arrayProductos)
