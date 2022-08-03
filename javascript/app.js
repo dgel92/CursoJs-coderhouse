@@ -1367,9 +1367,13 @@ const items =[
     price: 56999,
 },
 ]
+
+
+const contenedornavBar=document.getElementById('contenedor-navbar');
 const contenedorProductos=document.getElementById('contenedor-productos');
 const contenedorCarrito=document.getElementById('carrito-contenedor');
-const contenedorNavbar=document.getElementById('contenedorNavbar');
+const contenedorFooter=document.getElementById('contenedor-footer');
+
 
 
 const mostrarItems = (array, funcion) => {
@@ -1388,7 +1392,6 @@ function CrearItems(array){
                             <img src=${item.imgUrl}>
                             <div class='card_text'>
                                 <h1>${item.tittle}</h1>
-                                <h4>${item.categoria}</h4>
                                 <h3> $ ${item.price}</h3>
                                 <p>Stock =${item.stock}</p>
                                 </div>
@@ -1401,40 +1404,43 @@ function CrearItems(array){
 
 
 
-
-
-
-
-
-
-
-
-function Navbar(){{
-
-        let divNavbar = document.createElement('divNavbar');
-        divNavbar.className=`containerNavBar`;
-        divNavbar.innerHTML=`<div class ='boxNavbar'>
-                            <div class ='card'>
-                            <div class= 'titleNavbar'>titulo de la pagina</div>
-                            <div class='card_text'>
-                                <h1>${item.tittle}</h1>
-                                <h4>${item.categoria}</h4>
-                                <h3> $ ${item.price}</h3>
-                                <p>Stock =${item.stock}</p>
-                                </div>
+let navbar = document.createElement('div');
+navbar.className=`containerNavBar`;
+navbar.innerHTML =`<section class="boxNav">
+                        <div class=cardNav>
+                            <div class=logo>
+                                <div>logo de marca</div>                    
                             </div>
-                        </div>`
-                contenedorNavbar.appendChild(divNavbar);
-    }
-}
+                            <div class="menuNav">
+                                <a>Home</a>
+                                <a>Compra online</a>
+                                <a>Informacion importante</a>
+                                <a>Comunicate con nosotros</a>                    
+                            </div>
+                            <div class=carrito>
+                                <div>"Carrito de compras"</div>                    
+                            </div>
+                        </div>
+                    </section>`;
+    contenedornavBar.append(navbar);
 
-Navbar();
 
-
-
-
-
-
+let footerBox = document.createElement('div');
+footerBox.className=`containerFooter`;
+footerBox.innerHTML =`<section class="boxFooter">
+                        <div class=cardFooter>
+                            <div class=logo>
+                                <div>logo de marca</div>                    
+                            </div>
+                            <div class="footerMenu">
+                                <a>about us</a>
+                                <a>logo red social</a>
+                                <a>logo red social</a>
+                                <a>logo red social</a>                    
+                            </div>
+                        </div>
+                    </section>`;
+    contenedorFooter.append(footerBox);
 
 
 

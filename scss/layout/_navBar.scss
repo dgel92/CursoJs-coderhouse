@@ -1,19 +1,61 @@
-#contenedorNavbar{
-    display:flex;
+.boxNav{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+img, video, svg {
+    max-width: 100%;
     height: auto;
-    width: auto;
-    border: 2px solid red;
+}
+
+.cardNav{
+    display:flex;
+    flex-wrap: nowrap;
+    height: 15vh;
+    width: 100%;
+    padding: 0px 30px 0px 30px;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid blue;
 }
 
 
 
+.logo{
+    display:flex;
+    width: 280px;
+    height:120px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;
+}
 
 
 
+.menuNav{
+    display:flex;
+    width: 110vh;
+    border:2px solid orange;
+    justify-content: space-evenly;
+
+    a{
+        font-family: $vietnam;
+        font-size:1.1rem;
+        letter-spacing: 0.04em;
+        
+    };
+}
 
 
 
-
-
-
-
+.carrito{
+    display:flex;
+    width: 140px;
+    height:60px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;}
