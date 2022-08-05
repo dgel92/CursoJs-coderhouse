@@ -1,26 +1,6 @@
-.boxFooter{
-    margin: 0;
-    padding: 0;
-    color: inherit;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
-
-.cardFooter{
-    display:flex;
-    flex-wrap: nowrap;
-    height: 15vh;
-    width: 100%;
-    padding: 20px 30px 20px 30px;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid blue;
-}
-
 .footerMenu{
     display:flex;
-    width: 90vh;
+    width: 40vh;
     border:2px solid orange;
     justify-content: space-between;
 
