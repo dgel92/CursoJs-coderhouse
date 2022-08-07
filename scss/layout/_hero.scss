@@ -1,0 +1,31 @@
+#section-box-card{
+    display:flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+
+.product-card{
+    display:flex;
+    border: 2px solid red;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.title-card{
+    display:flex;
+    width: 100%;
+    border:2px solid orange;
+    justify-content: space-between;
+
+
+}
+
+.card_ph{
+    width: 320px;
+    height: auto;
+}

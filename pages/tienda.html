@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="./scss/main.css">
 </head>
 <body class="contenedor">
-    <nav>
-        <section class="navbar">
-            <div class="brandNav">
-                <p>Todos los medios de pago 3 cuotas s/interes</p>
-            </div>
-
-            <div class=cardNav>
-                <div class=logo>
-                        <a href="./index.html"><img src="./multimedia/img/logoSitio2.png"></img></a>                    
+    <header>
+        <a href="/index.html" class="brand"><h1>Visio Lamparas</h1></a>
+            <svg height="32px" class="nav_btn nav_btn_open" id="navOpen" viewBox="0 0 32 32">
+                <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+            </svg>
+            <nav id="nav">
+                <svg viewBox="0 0 24 24" class="nav_btn nav_btn-close" id="navClose">
+                <path d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z" />
+            </svg>
+            <section class="navbar">
+                <div class=cardNav>
+                    <div class="menu">
+                        <li><a href="./pages/tienda.html">Tienda</a></li>
+                        <li><a href="./pages/aMedida.html">A medida</a></li>
+                        <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
+                        <li><a>Carrito ()</a></li>                
+                    </div>
                 </div>
-                <div class="menuNav">
-                    <a href="./pages/tienda.html">Tienda</a>
-                    <a href="./pages/aMedida.html">A medida</a>
-                    <a href="./pages/sobreNosotros.html">Sobre nosotros</a>
-                    <a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a>                    
-                </div>
-                <div class=carrito>
-                    <a>Carrito ()</a>                    
-                </div>
-            </div>
-        </section>
-    </nav>
+            </section>
+        </nav>
+    </header>
 
     <main>
         <section id="section-box-card">
@@ -49,16 +49,34 @@
     </main>
 
     <footer>
-        <section class="cardNav">
-                <div class=logo>
-                    <div>logo de marca</div>                    
-                </div>
+        <section class="cardFooter">
+            <div class="logoFooter">
+                <img src="./multimedia/img/logoSitio2.png">
+            </div>
+            <hr></hr>
+            <div class="footer-text"><a>Siguenos</a></div>
                 <div class="footerMenu">
-                    <a>about us</a>
-                    <a>logo red social</a>
-                    <a>logo red social</a>
-                    <a>logo red social</a>                    
+                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="fa-brands:instagram" style="color: black;" data-width="24" data-height="24"></span></a></li>
+                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="simple-icons:vsco" style="color: black;" data-width="24" data-height="24"></span></a></li>
+                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="bi:twitter" style="color: black;" data-width="24" data-height="24"></span></a></li>                
                 </div>
+                <hr></hr>
+            <div class="footer-text"><a>Ayuda</a></div>
+                <div class="footerlist">
+                    <li><span>Contacto</span></a></li>
+                    <li><span>Cuidados y mantenimiento</span></a></li>
+                    <li><span>Servicio Post-venta</span></a></li>
+                    <li><span>¿Tienes una tienda?</span></a></li>
+                </div>
+                <hr></hr>
+            <div class="footer-text"><a>Importante</a></div>
+                <div class="footerlist">
+                    <li><span>Pedidos, envios y devoluciones</span></a></li>
+                    <li><span>Encargar a medida</span></a></li>
+                    <li><span>Aviso Legal</span></a></li>
+                    <li><span>Privacidad y Cookies</span></a></li>
+                </div>
+            <div class="footerFinal"></div>
         </section>
     </footer>
     <script src="./js/datos.js" type="module"></script>
