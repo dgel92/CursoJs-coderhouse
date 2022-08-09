@@ -5,10 +5,16 @@
     font-weight: 600;
 }
 
+.menuNav{
+    li{
+        color: white;
+    }
+}
+
 header{
     position: relative;
     display:flex;
-    background: black;
+    background: rgb(204, 202, 202);
     border: 1px solid blue;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +61,6 @@ header{
             margin-top:25vh;
             margin-left: 2em;
 
-
             li{
                 color: white;
                 text-decoration: none;
@@ -74,11 +79,9 @@ header{
 
                 }
             }
-
         }
+
     }
-
-
 
     @media(min-width: 760px){
         .nav_btn{

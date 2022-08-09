@@ -50,20 +50,71 @@ svg {
   padding: 10px 10px 10px 10px;
 }
 
-.title-card {
+.product-card .card_ph {
+  width: 320px;
+  height: auto;
+}
+
+.product-card .product-tittle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  border: 2px solid orange;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  border: 2px solid blue;
 }
 
-.card_ph {
-  width: 320px;
-  height: auto;
+.product-card .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: -50px;
+  width: 90%;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 10px;
+  border: 2px solid blue;
+}
+
+.product-card .product-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: -30px;
+  width: 90%;
+  height: 120px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid blueviolet;
+}
+
+.btn {
+  width: 120px;
+  height: 30px;
 }
 
 .brand {
@@ -73,12 +124,16 @@ svg {
   font-weight: 600;
 }
 
+.menuNav li {
+  color: white;
+}
+
 header {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: black;
+  background: #cccaca;
   border: 1px solid blue;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
