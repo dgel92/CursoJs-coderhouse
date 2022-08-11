@@ -27,9 +27,6 @@ export const arrayItems =[
         price: 6790,
         detalle: 'ñonñonñon',
     },
-    
-
-
     {
         id: 4,
         tittle: "lampara 4 ",
@@ -40,9 +37,9 @@ export const arrayItems =[
         detalle: 'ñonñonñon',
     },
     {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: './multimedia/img/lampara6.jpg',
+        id: 5,
+        tittle: "lampara 5",
+        imgUrl: './multimedia/img/lampara5.jpg',
         categoria: ["lampara de pie"],
         portada: false,
         stock: 10,
@@ -60,9 +57,9 @@ export const arrayItems =[
         detalle: 'ñonñonñon',
     },
     {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: './multimedia/img/lampara6.jpg',
+        id: 7,
+        tittle: "lampara 7",
+        imgUrl: './multimedia/img/lampara7.jpg',
         categoria: ["lampara de pie"],
         portada: false,
         stock: 10,
@@ -70,9 +67,9 @@ export const arrayItems =[
         detalle: 'ñonñonñon',
     },
     {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: './multimedia/img/lampara6.jpg',
+        id: 8,
+        tittle: "lampara 8",
+        imgUrl: './multimedia/img/lampara8.jpg',
         categoria: ["lampara de pie"],
         portada: false,
         stock: 10,
@@ -80,9 +77,9 @@ export const arrayItems =[
         detalle: 'ñonñonñon',
     },
     {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: './multimedia/img/lampara6.jpg',
+        id: 9,
+        tittle: "lampara 9",
+        imgUrl: './multimedia/img/lampara9.jpg',
         categoria: ["lampara de pie"],
         portada: false,
         stock: 10,
@@ -90,9 +87,9 @@ export const arrayItems =[
         detalle: 'ñonñonñon',
     },
     {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: './multimedia/img/lampara6.jpg',
+        id: 10,
+        tittle: "lampara 10",
+        imgUrl: './multimedia/img/lampara10.jpg',
         categoria: ["lampara de pie"],
         portada: false,
         stock: 10,
@@ -100,9 +97,9 @@ export const arrayItems =[
         detalle: 'ñonñonñon',
     },
     {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: './multimedia/img/lampara6.jpg',
+        id: 11,
+        tittle: "lampara 11",
+        imgUrl: './multimedia/img/lampara11.jpg',
         categoria: ["lampara de pie"],
         portada: false,
         stock: 10,

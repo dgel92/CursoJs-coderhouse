@@ -37,12 +37,19 @@ renderizado(arrayPortada);
 
 const btn1 = document.querySelector("#btn1");
 
+/*modal*/
+const modalContainer = document.querySelector("#modal-container")
+const modal = document.querySelector("#modal")
+const abrirModal = document.querySelector("#btn-modal-open")
+const cerrarModal = document.querySelector("#btn-modal-close")
 
+abrirModal.addEventListener('click',()=>{
+    modalContainer.classList.add('modal-container-active')
+})
 
-
-
-
-
+cerrarModal.addEventListener('click',()=>{
+    modalContainer.classList.remove('modal-container-active')
+})
 
 
 
