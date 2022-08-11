@@ -1,9 +1,5 @@
 import {arrayItems} from "../js/datos.js";
-
-const section = document.querySelector("#section-box-card")
-const temp = document.querySelector("template")
-const card = temp.content.querySelector("div")
-
+import {arrayPortada} from "../js/datosPortada.js";
 
 function get(element) {
     return document.getElementById(element);
@@ -20,7 +16,9 @@ close.addEventListener('click', function () {
 })
 
 
-
+const section = document.querySelector("#section-box-card")
+const temp = document.querySelector("template")
+const card = temp.content.querySelector("div")
 
 function renderizado(array){
     array.forEach((elm)=>{
@@ -33,13 +31,11 @@ function renderizado(array){
         })
     }
 
-renderizado(arrayItems)
-
-const carritoDeCompras = [];
-
-const addToCard = arrayItems.push
+renderizado(arrayPortada);
 
 
+
+const btn1 = document.querySelector("#btn1");
 
 
 
@@ -51,3 +47,70 @@ const addToCard = arrayItems.push
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    function cardWidget(){
+    const carritoDeCompras=[]
+    const stock = arrayItems.filter(producto =>producto.stock)
+    
+    function handleAdd(){
+        if (count < stock){
+            return setCount (count + 1);
+        }
+    }
+
+    function handleSubstract(){
+        if ((count) > stock){
+            return setCount (count - 1);
+        }
+    }
+
+    function handleBuy(){
+        arrayItems.find(producto => producto.id == id)
+        carritoDeCompras.push()
+    }
+
+    const sectionCardtWidgwet = document.querySelector("#cardtWidget-section")
+    const tempCardtWidgwet = ocument.querySelector("template")
+    const cardWidgwet = tempCardtWidgwet.content.querySelector("div")
+    const clonarCard = cardWidgwet.cloneNode(card,true)
+
+        clonarCard.children[2].innerText = {handleAdd}
+        clonarCard.children[1].innerText = elm.tittle
+        clonarCard.children[2].innerText =`$ ${elm.price}`
+        clonarCard.children[3].innerText = elm.detalle
+        sectionCardtWidgwet.appendChild(clonarCard)
+    }
+    */
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function buscador(){
+    let buscador = prompt('ingresa el producto que quieres buscar');
+    let prodIngresado = arrayProd.filter(producto => producto.nombre.includes(buscador));
+    console.log(prodIngresado);
+    console.log("producto buscado:");
+}*/

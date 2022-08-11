@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
-    <link rel="stylesheet" href="./scss/main.css">
+    <title>Curso js - Daniel Gonzalez</title>
+    <link rel="stylesheet" href="../scss/main.css">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
 </head>
 <body class="contenedor">
     <header>
@@ -18,13 +21,20 @@
                 <path d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z" />
             </svg>
             <section class="navbar">
+
                 <div class=cardNav>
-                    <div class="menu">
-                        <li><a href="./pages/tienda.html">Tienda</a></li>
+                    <div class="menuNav">
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="./pages/aMedida.html">A medida</a></li>
                         <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
-                        <li><a>Carrito ()</a></li>                
+                        <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>                
+                    </div>
+                    <div>
+                        <div class='cartwidget'>
+                            <div class='carrito'>
+                                <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="50" data-height="50"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -32,7 +42,7 @@
     </header>
 
     <main>
-        <section id="section-box-card">
+        <section id="section-tienda">
             <template>
                 <div class = product-card class ='wrapper'>
                     <h3>tittle</h3>
@@ -49,37 +59,38 @@
     </main>
 
     <footer>
-        <section class="cardFooter">
+        <hr class="cardFooter">
             <div class="logoFooter">
                 <img src="./multimedia/img/logoSitio2.png">
             </div>
             <hr></hr>
             <div class="footer-text"><a>Siguenos</a></div>
                 <div class="footerMenu">
-                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="fa-brands:instagram" style="color: black;" data-width="24" data-height="24"></span></a></li>
-                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="simple-icons:vsco" style="color: black;" data-width="24" data-height="24"></span></a></li>
-                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="bi:twitter" style="color: black;" data-width="24" data-height="24"></span></a></li>                
+                        <li class="icon-sm"><a href="#"><span class="iconify" data-icon="fa-brands:instagram" style="color: black;" data-width="24" data-height="24"></span></a></li>
+                        <li class="icon-sm"><a href="#"><span class="iconify" data-icon="simple-icons:vsco" style="color: black;" data-width="24" data-height="24"></span></a></li>
+                        <li class="icon-sm"><a href="#"><span class="iconify" data-icon="bi:twitter" style="color: black;" data-width="24" data-height="24"></span></a></li>                
                 </div>
                 <hr></hr>
-            <div class="footer-text"><a>Ayuda</a></div>
+                <div class="footer-text"><a>Ayuda</a></div>
                 <div class="footerlist">
-                    <li><span>Contacto</span></a></li>
-                    <li><span>Cuidados y mantenimiento</span></a></li>
-                    <li><span>Servicio Post-venta</span></a></li>
-                    <li><span>¿Tienes una tienda?</span></a></li>
-                </div>
-                <hr></hr>
-            <div class="footer-text"><a>Importante</a></div>
+                        <li><span>Contacto</span></a></li>
+                        <li><span>Cuidados y mantenimiento</span></a></li>
+                        <li><span>Servicio Post-venta</span></a></li>
+                        <li><span>¿Tienes una tienda?</span></a></li>
+                    </div>
+                    <hr></hr>
+                <div class="footer-text"><a>Importante</a></div>
                 <div class="footerlist">
-                    <li><span>Pedidos, envios y devoluciones</span></a></li>
-                    <li><span>Encargar a medida</span></a></li>
-                    <li><span>Aviso Legal</span></a></li>
-                    <li><span>Privacidad y Cookies</span></a></li>
-                </div>
-            <div class="footerFinal"></div>
+                        <li><span>Pedidos, envios y devoluciones</span></a></li>
+                        <li><span>Encargar a medida</span></a></li>
+                        <li><span>Aviso Legal</span></a></li>
+                        <li><span>Privacidad y Cookies</span></a></li>
+                    </div>
+                    <div class="footerFinal"></div>
         </section>
     </footer>
-    <script src="./js/datos.js" type="module"></script>
-    <script src="./js/app.js" type="module"></script>
+    <script src="../js/datosPortada.js" type="module"></script>
+    <script src="../js/datos.js" type="module"></script>
+    <script src="../js/app.js" type="module"></script>
 </body>
 </html>
