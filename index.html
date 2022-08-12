@@ -48,7 +48,7 @@
                         <h2 class="product-tittle">tittle</h2>
                         <h3 class="product-price">price</h3>
                         <p class="product-detail">detalle</p>
-                    <button id="btn1" class="btn btn-primary">Agregar al carrito</button>
+                    <button id="btnAgregarAlCarrito" class="btn btn-primary">Agregar al carrito</button>
                     <hr>
                 </div>
             </template>
@@ -72,17 +72,28 @@
                         <h5>Plazo de entrega en stock de 7 a 10 dias.</h5>
                         <h5>Productos a pedido de 15 a 20 dias.</h5>
                     </div>
-                    <button id="btn-modal-close" class="btn btn-prymary">Cerrar</button>
+                    <button id="btn-modal-close" ref= ${item.id} class="btn btn-prymary">Cerrar</button>
                 </div>    
             </div>
         </section>
+
+        <form id="formulario">
+            <input id="input-nombre" class="form-type" type="text" placeholder="Nombre">
+            <input id="input-apellido" class="form-type" type="text" placeholder="Apellido">
+            <input id="input-direccion" class="form-type" type="text" placeholder="Apellido">
+            <input id="input-email" class="form-type" type="text" placeholder="Email">
+            <input id="input-text" class="form-type" type="text" placeholder="text">
+    
+            <button class="btnFormulario" type="submit" id="btn-submit">Submit</button>
+        </form>
+
 
     </main>
 
     <footer>
         <hr class="cardFooter">
             <div class="logoFooter">
-                <img src="./multimedia/img/logoSitio2.png">
+                <img src="../desafio-1-Ciclos/multimedia/img/logoSitio2.png">
             </div>
             <hr></hr>
             <div class="footer-text"><a>Siguenos</a></div>
@@ -94,7 +105,7 @@
                 <hr></hr>
                 <div class="footer-text"><a>Ayuda</a></div>
                 <div class="footerlist">
-                        <li><a href="./contactanos.html">Contactanos</a></li>
+                        <li><a href="../contactanos.html">Contactanos</a></li>
                         <li><span>Cuidados y mantenimiento</span></a></li>
                         <li><span>Servicio Post-venta</span></a></li>
                         <li><span>¿Tienes una tienda?</span></a></li>
@@ -109,6 +120,7 @@
                     </div>
                     <div class="footerFinal"></div>
         </section>
+        
     </footer>
     <script src="./js/datos.js" type="module"></script>
     <script src="./js/datosPortada.js" type="module"></script>

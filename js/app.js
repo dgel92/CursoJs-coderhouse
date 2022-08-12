@@ -1,6 +1,8 @@
 import {arrayItems} from "../js/datos.js";
 import {arrayPortada} from "../js/datosPortada.js";
 
+
+/*Funcion para navbar mobile - inicio*/
 function get(element) {
     return document.getElementById(element);
 }
@@ -14,8 +16,11 @@ open.addEventListener('click', function () {
 close.addEventListener('click', function () {
     nav.classList.remove('nav-open');
 })
+//Funcion para navbar mobile - fin//
 
 
+
+/*Funcion card para productoss - Inicio*/
 const section = document.querySelector("#section-box-card")
 const temp = document.querySelector("template")
 const card = temp.content.querySelector("div")
@@ -31,13 +36,13 @@ function renderizado(array){
         })
     }
 
+
 renderizado(arrayPortada);
+/*Funcion card para productoss - Fin*/
 
 
 
-const btn1 = document.querySelector("#btn1");
-
-/*modal*/
+/*modal - inicio*/
 const modalContainer = document.querySelector("#modal-container")
 const modal = document.querySelector("#modal")
 const abrirModal = document.querySelector("#btn-modal-open")
@@ -50,14 +55,80 @@ abrirModal.addEventListener('click',()=>{
 cerrarModal.addEventListener('click',()=>{
     modalContainer.classList.remove('modal-container-active')
 })
+/*modal - fin*/
 
 
 
+/*funcion para agregar al carrito
+const carritoDeCompras = []
+const btnAgregar = document.querySelector("#btnAgregarAlCarrito")
+btnAgregar.addEventListener('click', ()=>{
+    carritoDeCompras.push(arrayPortada.id)
+    alert("agregado al carrito")
+})
+
+function eventoBotones(id){
+    const target = document.querySelectorAll("#btnAgregarAlCarrito")
+    target.forEach(el =>{
+        el.addEventListener('click', agregarCarrito)
+    })
+}
+const agregarCarrito = (e) =>{
+    console.log(e.target)
+    }
+
+    eventoBotones(btnAgregarAlCarrito)*/
 
 
 
+/*formulario - inicio*/
 
+const inputNombre = document.querySelector('#input-nombre')
+const inputApellido = document.querySelector('#input-apellido')
+const inputDireccion= document.querySelector('#input-direccion')
+const inputEmail = document.querySelector('#input-email')
+const inputText = document.querySelector('#input-text')
+    
+const formulario = document.querySelector('#formulario');
 
+inputNombre.addEventListener('change', () =>{
+    console.log( inputNombre.value )
+})
+
+inputApellido.addEventListener('change', () =>{
+    console.log( inputApellido.value )
+})
+
+inputDireccion.addEventListener('change', () =>{
+    console.log( inputDireccion.value )
+})
+
+inputEmail.addEventListener('change', () =>{
+    console.log( inputEmail.value )
+})
+inputText.addEventListener('change', () =>{
+    console.log( inputText.value )
+})
+
+formulario.addEventListener('submit', (e) =>{
+    e.preventDefault()
+
+    const nombre = inputNombre.value
+    const apellido = inputApellido.value
+    const direccion = inputDireccion.value
+    const email = inputEmail.value
+    const text = inputText.value
+
+    const usuario = {
+        nombre: nombre,
+        apellido: apellido,
+        direccion: direccion, 
+        email: email,
+        text: text,
+    }
+
+    console.log(usuario)
+})
 
 
 
