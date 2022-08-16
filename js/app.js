@@ -1,5 +1,5 @@
 import {arrayItems} from "../js/datos.js";
-import {arrayPortada} from "../js/datosPortada.js";
+
 
 
 /*Funcion para navbar mobile - inicio*/
@@ -20,6 +20,16 @@ close.addEventListener('click', function () {
 
 
 
+//filtrar productos de portada - inicio//
+const filtrar = arrayItems.filter((prod)=>{
+    return prod.portada  == true
+    })
+    
+    console.log(filtrar)
+//filtrar productos de portada - fin//
+
+
+
 /*Funcion card para productoss - Inicio*/
 const section = document.querySelector("#section-box-card")
 const temp = document.querySelector("template")
@@ -36,8 +46,8 @@ function renderizado(array){
         })
     }
 
+renderizado(filtrar);
 
-renderizado(arrayPortada);
 /*Funcion card para productoss - Fin*/
 
 
@@ -54,8 +64,30 @@ abrirModal.addEventListener('click',()=>{
 
 cerrarModal.addEventListener('click',()=>{
     modalContainer.classList.remove('modal-container-active')
+    abrirModal = disabled;
 })
 /*modal - fin*/
+
+
+
+arrayItems.forEach((array) => {
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,62 +110,6 @@ const agregarCarrito = (e) =>{
     }
 
     eventoBotones(btnAgregarAlCarrito)*/
-
-
-
-/*formulario - inicio*/
-
-const inputNombre = document.querySelector('#input-nombre')
-const inputApellido = document.querySelector('#input-apellido')
-const inputDireccion= document.querySelector('#input-direccion')
-const inputEmail = document.querySelector('#input-email')
-const inputText = document.querySelector('#input-text')
-    
-const formulario = document.querySelector('#formulario');
-
-inputNombre.addEventListener('change', () =>{
-    console.log( inputNombre.value )
-})
-
-inputApellido.addEventListener('change', () =>{
-    console.log( inputApellido.value )
-})
-
-inputDireccion.addEventListener('change', () =>{
-    console.log( inputDireccion.value )
-})
-
-inputEmail.addEventListener('change', () =>{
-    console.log( inputEmail.value )
-})
-inputText.addEventListener('change', () =>{
-    console.log( inputText.value )
-})
-
-formulario.addEventListener('submit', (e) =>{
-    e.preventDefault()
-
-    const nombre = inputNombre.value
-    const apellido = inputApellido.value
-    const direccion = inputDireccion.value
-    const email = inputEmail.value
-    const text = inputText.value
-
-    const usuario = {
-        nombre: nombre,
-        apellido: apellido,
-        direccion: direccion, 
-        email: email,
-        text: text,
-    }
-
-    console.log(usuario)
-})
-
-
-
-
-
 
 
 

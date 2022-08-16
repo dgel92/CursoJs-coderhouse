@@ -299,6 +299,70 @@ svg {
   width: 60px;
 }
 
+.cardfiltros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid red;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btnfiltros {
+  width: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: .8rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.listaFiltros li a {
+  background-color: #222121b6;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 15px 10px;
+  display: block;
+  z-index: 1;
+}
+
+.listaFiltros li a:hover {
+  background-color: #444343b6;
+}
+
+.listaFiltros > li {
+  float: left;
+}
+
+.listaFiltros li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.listaFiltros li:hover > ul {
+  display: block;
+}
+
+.listaFiltros li ul li {
+  position: relative;
+}
+
+.listaFiltros li ul li {
+  bottom: -140px;
+  top: 0px;
+}
+
 .brand {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -360,10 +424,10 @@ header nav .menu {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-flow: column;
+          flex-flow: column;
   gap: 2em;
-  margin-top: 25vh;
+  margin-top: 15em;
   margin-left: 2em;
 }
 

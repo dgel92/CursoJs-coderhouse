@@ -55,10 +55,9 @@ header{
 
         .menu {
             display:flex;
-            flex-flow: column nowrap;
+            flex-flow: column;
             gap: 2em;
-
-            margin-top:25vh;
+            margin-top:15em;
             margin-left: 2em;
 
             li{

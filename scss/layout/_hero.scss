@@ -75,3 +75,63 @@
     margin-top: 10px;
     width: 60px;
 }
+
+
+.cardfiltros{
+    display:flex;
+    flex-direction: row;
+    border: 1px solid red;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btnfiltros{
+    width: auto;
+    justify-content: space-between;
+    margin: auto;
+    font-family: $roboto;
+    font-size: .8rem;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.listaFiltros li a{
+    background-color: $clr-tipografia;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 15px 10px;
+    display:block;
+    z-index: 1;
+}
+
+.listaFiltros li a:hover{
+    background-color: #444343b6;
+}
+
+.listaFiltros > li {
+    float:left;
+}
+
+.listaFiltros li ul{
+    display:none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.listaFiltros li:hover > ul {
+    display:block;
+}
+
+.listaFiltros li ul li {
+    position: relative;
+    
+}
+
+.listaFiltros li ul li {
+    bottom: -140px;
+    top: 0px;
+
+}

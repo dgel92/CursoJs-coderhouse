@@ -18,38 +18,61 @@
             </svg>
             <nav id="nav">
                 <svg viewBox="0 0 24 24" class="nav_btn nav_btn-close" id="navClose">
-                <path d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z" />
-            </svg>
-            <section class="navbar">
-
-                <div class=cardNav>
-                    <div class="menuNav">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="./pages/aMedida.html">A medida</a></li>
-                        <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>                
-                    </div>
-                    <div>
-                        <div class='cartwidget'>
-                            <div class='carrito'>
-                                <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="50" data-height="50"></span>
+                    <path d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z" />
+                </svg>
+                <section class="navbar">
+                    <div class=cardNav>
+                        <div class="menuNav">
+                            <ul class="menu">
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="./pages/aMedida.html">A medida</a></li>
+                                <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
+                                <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
+                            </ul>                
+                        </div>
+                        <div>
+                            <div class='cartwidget'>
+                                <div class='carrito'>
+                                    <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="50" data-height="50" button onclick="location.href='./pages/cardtWidget.html'"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </nav>
+                </section>
+            </nav>
     </header>
 
     <main>
-        <section id="section-tienda">
+        <section class="cardfiltros">
+            <div class="btnfiltros">
+                <ul class="listaFiltros">
+                    <li><button> filtrar por categorias</button>
+                        <ul>
+                            <li><button class="btn1LamparaDePie"> lamparas de pie</button></li>
+                            <li><button class="btn1LamparaEscritorio"> lamparas de escritorio</button></li>
+                        </ul>
+                    </li>        
+                </ul>
+            </div>            
+            <div class="btnfiltros">
+                <ul class="listaFiltros">
+                    <li><button> filtrar por precios</button>
+                        <ul>
+                            <li><button class="btnMayorAMenor"> de mayor a menor</button></li>
+                            <li><button class="btnMenorAMayor"> de menor a mayor</button></li>
+                        </ul>
+                    </li>        
+                </ul>
+            </div>          
+        </section>
+        <section id="section-box-tienda">
             <template>
-                <div class = product-card class ='wrapper'>
-                    <h3>tittle</h3>
-                    <h3>price</h3>
-                    <p>detalle</p>
-                    <p>stock</p>
+                <div class = product-card>
                     <img src="imgUrl" class="card_ph"></img>
+                        <h2 class="product-tittle">tittle</h2>
+                        <h3 class="product-price">price</h3>
+                        <p class="product-detail">detalle</p>
+                    <button id="btnAgregarAlCarrito" class="btn btn-primary">Agregar al carrito</button>
                     <hr>
                 </div>
             </template>
@@ -61,7 +84,7 @@
     <footer>
         <hr class="cardFooter">
             <div class="logoFooter">
-                <img src="./multimedia/img/logoSitio2.png">
+                <img src="../multimedia/img/logoSitio2.png">
             </div>
             <hr></hr>
             <div class="footer-text"><a>Siguenos</a></div>
@@ -89,8 +112,8 @@
                     <div class="footerFinal"></div>
         </section>
     </footer>
-    <script src="../js/datosPortada.js" type="module"></script>
     <script src="../js/datos.js" type="module"></script>
+    <script src="../js/appsTienda.js" type="module"></script>
     <script src="../js/app.js" type="module"></script>
 </body>
 </html>
