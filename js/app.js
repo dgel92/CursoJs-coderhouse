@@ -168,3 +168,7 @@ const agregarCarrito = (e) =>{
     console.log(prodIngresado);
     console.log("producto buscado:");
 }*/
+
+
+
+/*Modo oscuro*/

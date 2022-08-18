@@ -363,6 +363,14 @@ ul, ol {
   top: 0px;
 }
 
+.dark {
+  background-color: rgba(78, 78, 78, 0.705);
+}
+
+.dark * {
+  color: white;
+}
+
 .brand {
   font-family: "Roboto", sans-serif;
   color: white;

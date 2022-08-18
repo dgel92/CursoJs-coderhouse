@@ -15,7 +15,7 @@ function renderizadoTienda(array){
         section.appendChild(cardClonar)
         })
     }
-
+    
     renderizadoTienda(arrayItems);
     /*Funcion card para productoss - Fin*/
 

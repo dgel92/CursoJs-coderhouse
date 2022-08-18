@@ -59,3 +59,26 @@ formulario.addEventListener('submit', (e) =>{
 })
 
 /*formulario - fin*/
+
+
+const inputNombre2 = document.querySelector("#input-nombre");
+const inputRol2 = document.querySelector("#input-rol");
+const btnGuardar = document.querySelector("#btn-guardar");
+
+const usuarios = []
+
+const guardarUsuario = () => {
+    const valueNombre = inputNombre2.value
+    const valueRol = inputRol2.value
+
+    usuarios.push({
+        nombre: valueNombre,
+        rol: valueRol
+    })
+    localStorage.setItem('usuarios', JSON.stringify(usuarios))
+    console.log(usuarios)
+    valueNombre=' '
+    valueRol= ' '
+}
+
+btnGuardar.addEventListener('click', guardarUsuario)

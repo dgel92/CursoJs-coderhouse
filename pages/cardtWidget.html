@@ -41,26 +41,24 @@
         </nav>
     </header>
     <main>
-        <div id="cardtWidget-section">
-            <div class="cartwidget-container">
-                <div>
-                    <h1>Nombre del producto agregado</h1>
-                </div>
-                <div>
-                    <h3>cantidad agregada</h3>
-                    <h3>costo por unidad</h3>
-                    <h3>costo total</h3>
-                    <div>
-                        <button>Eliminar producto</button>
+        <section id="section-itemDetail">
+            <template>
+                <div class = "product-cardItemDetail">
+                    <img src="imgUrl" class="card_ph"></img>
+                        <h2 class="product-tittle">tittle</h2>
+                        <h3 class="product-price">price</h3>
+                        <p class="product-detail">detalle</p>
+                    <button id="btnAgregarAlCarrito" class="btn btn-primary">Ver mas</button>
+                    <hr><br>
+                    <div class="widget-container" id="widget-container">
+                        <button class="btn resta"> - </button>
+                        <button class="btn suma"> + </button>
+                        <p id="cantidad"> x</p>
                     </div>
+                        <button class="btn-comprar btn-primary" id="#compra">Comprar</button>
                 </div>
-                <button>Vaciar Carrito</button>
-            </div>
-        </div>
-        <div>
-            <button>Finalizar Compra</button>
-        </div>
-
+            </template>
+        </section>
     </main>
     <footer>
         <hr class="cardFooter">
@@ -93,8 +91,7 @@
                     <div class="footerFinal"></div>
         </section>
     </footer>
-    <script src="../js/datos.js" type="module"></script>
-    <script src="../js/datosPortada.js" type="module"></script>
-    <script src="../js/datos.js" type="module"></script>
+    <script src="../js/itemDetailContainer.js" type="module"></script>
+    <script src="../js/carrito.js" type="module"></script>
 </body>
 </html>
