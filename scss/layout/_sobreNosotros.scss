@@ -1,0 +1,31 @@
+.text-container{
+    display:flex;
+    flex-direction: column;
+    width: auto;
+    padding: 20px;
+    border: 2px solid blue;
+    align-items: center;
+
+    p{
+        font-family: $roboto;
+        font-size: 0.85rem;
+        letter-spacing: .08em;
+    }
+
+    h2{
+        font-family: $vietnam;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        padding: 10px 0px 10px 0px;
+    }
+
+    h3{
+        font-family: $roboto;
+        font-size: 1.3rem;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        padding: 10px 0px 10px 0px;
+        
+    }
+}

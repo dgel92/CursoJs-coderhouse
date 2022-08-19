@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="../scss/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
 </head>
 <body class="contenedor" class="dark">
     <header>
-        <a href="/index.html" class="brand"><h1>Visio Lamparas</h1></a>
+        <a href="../index.html" class="brand"><h1>Visio Lamparas</h1></a>
             <svg height="32px" class="nav_btn nav_btn_open" id="navOpen" viewBox="0 0 32 32">
                 <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
             </svg>
@@ -24,10 +25,10 @@
 
                 <div class=cardNav>
                     <div class="menuNav">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="./pages/tienda.html">Tienda</a></li>
-                        <li><a href="./pages/aMedida.html">A medida</a></li>
-                        <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>                
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/tienda.html">Tienda</a></li>
+                        <li><a href="../pages/aMedida.html">A medida</a></li>
+                        <li><a href="../pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>                
                     </div>
                     <div>
                         <div class='cartwidget'>
@@ -42,31 +43,68 @@
     </header>
 
     <main>
-        <div>
-            <button class="darkMode">Cambiar de modo</button>
-        </div>
-        <div>
-            <input type="text" class="form-control" id="input-nombre">
-            <input type="text" class="form-control" id="input-rol">
-            <button id="btn-guardar" class="btn btn-primary">guardar</button>
-        </div>
-        <form id="formulario">
-            <input id="input-nombre" class="form-type" type="text" placeholder="Nombre">
-            <input id="input-apellido" class="form-type" type="text" placeholder="Apellido">
-            <input id="input-direccion" class="form-type" type="text" placeholder="Direccion">
-            <input id="input-email" class="form-type" type="text" placeholder="Email">
-            <input id="input-text" class="form-type" type="text" placeholder="text">
-    
-            <button class="btnFormulario" type="submit" id="btn-submit">Submit</button>
-        </form>
-        
+        <section>
+            <div id="carouselExampleControls" class="carousel slide carousel-container" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../multimedia/img/lampara2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/img/lampara3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/img/lampara5.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section>
+            <div class="text-container">
+                <p>
+                    Somos Enzo Vissio y mi hijo "xxx-",. este emprendimiento nace por la dedicacion a la construccion y diseño artesanal en madera que siempre llevamos a cabo.
+                    A raiz de la pandemia que afecto nuestra cotidianidad comenzamos la construccion de objetos, experimentando y decidimos comenzar a fabricar lamparas y otros objetos.
 
+                    Buscamos que exista una conexion y coherencia entre lo que producimos, nuestra vida y forma de entender el mundo. Tener nuestro propio taller nos permite transmitir todo lo que creemos a traves de lo que creamos.
+
+                    Entre nuestros ideales se encuentra ofrecer una opcion de consumo consciente, crear objetos que por su diseño, elaboracion, materialidad y funcionabilidad permitan generar en tu espacio donde puedas estar mas augusto.
+                    
+                </p><br>
+                <h2>Nuestros ideales</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, optio quam! Sint neque nesciunt ipsa nihil incidunt et quibusdam officiis possimus, hic vitae quia maiores sapiente minus deleniti aut magni libero iure sed illo est saepe. Architecto quasi unde sed, est fuga quae beatae! Sed ducimus architecto eligendi velit inventore!</p>
+                
+                <h3>Diseño y artesania</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, optio quam! Sint neque nesciunt ipsa nihil incidunt et quibusdam officiis possimus, hic vitae quia maiores sapiente minus deleniti aut magni libero iure sed illo est saepe. Architecto quasi unde sed, est fuga quae beatae! Sed ducimus architecto eligendi velit inventore!</p>
+                
+                
+                <h3>Funcionabilidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, optio quam! Sint neque nesciunt ipsa nihil incidunt et quibusdam officiis possimus, hic vitae quia maiores sapiente minus deleniti aut magni libero iure sed illo est saepe. Architecto quasi unde sed, est fuga quae beatae! Sed ducimus architecto eligendi velit inventore!</p>
+                
+
+                <h3>Productos Duraderos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, optio quam! Sint neque nesciunt ipsa nihil incidunt et quibusdam officiis possimus, hic vitae quia maiores sapiente minus deleniti aut magni libero iure sed illo est saepe. Architecto quasi unde sed, est fuga quae beatae! Sed ducimus architecto eligendi velit inventore!</p>
+                
+
+                <h3>Sostenibilidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, optio quam! Sint neque nesciunt ipsa nihil incidunt et quibusdam officiis possimus, hic vitae quia maiores sapiente minus deleniti aut magni libero iure sed illo est saepe. Architecto quasi unde sed, est fuga quae beatae! Sed ducimus architecto eligendi velit inventore!</p>
+                
+                <h3>Objetos que crean hogar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, optio quam! Sint neque nesciunt ipsa nihil incidunt et quibusdam officiis possimus, hic vitae quia maiores sapiente minus deleniti aut magni libero iure sed illo est saepe. Architecto quasi unde sed, est fuga quae beatae! Sed ducimus architecto eligendi velit inventore!</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <hr class="cardFooter">
             <div class="logoFooter">
-                <img src="./multimedia/img/logoSitio2.png">
+                <img src="../multimedia/img/logoSitio2.png">
             </div>
             <hr></hr>
             <div class="footer-text"><a>Siguenos</a></div>
@@ -94,7 +132,8 @@
                     <div class="footerFinal"></div>
         </section>
     </footer>
-    <script src="./js/datos.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="../js/app.js" type="module"></script>
     <script src="../js/formulario.js" type="module"></script>
     <script src="../js/ModoOscuro.js" type="module"></script>
 </body>

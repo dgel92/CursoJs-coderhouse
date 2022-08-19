@@ -176,6 +176,50 @@ svg {
   visibility: visible;
 }
 
+.btn-oculto {
+  opacity: 0;
+  visibility: inherit;
+  display: none;
+}
+
+.text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+  padding: 20px;
+  border: 2px solid blue;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-container p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: .08em;
+}
+
+.text-container h2 {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 10px 0px 10px 0px;
+}
+
+.text-container h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  padding: 10px 0px 10px 0px;
+}
+
 #section-box-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,10 +422,6 @@ ul, ol {
   font-weight: 600;
 }
 
-.menuNav li {
-  color: white;
-}
-
 header {
   position: relative;
   display: -webkit-box;
@@ -440,7 +480,7 @@ header nav .menu {
 }
 
 header nav .menu li {
-  color: white;
+  color: rgba(255, 255, 255, 0.808);
   text-decoration: none;
   opacity: 0.8;
 }
@@ -452,6 +492,24 @@ header nav .menu li.active {
 }
 
 header nav .menu li:hover {
+  -webkit-text-decoration: 1px underline white;
+          text-decoration: 1px underline white;
+  text-underline-offset: 4px;
+}
+
+header nav .carrito {
+  position: relative;
+  left: 12vh;
+}
+
+header nav .darkMode {
+  position: relative;
+  bottom: -20vh;
+  left: 14vh;
+  font-size: .8rem;
+}
+
+header nav .darkMode:hover {
   -webkit-text-decoration: 1px underline white;
           text-decoration: 1px underline white;
   text-underline-offset: 4px;
@@ -555,6 +613,7 @@ header nav .menu li:hover {
 .footerlist li {
   margin-bottom: 5px;
   margin-top: 5px;
+  font-size: 0.8rem;
 }
 
 .footerFinal {
@@ -596,5 +655,9 @@ header nav .menu li:hover {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.carousel-container {
+  padding-top: 20px;
 }
 /*# sourceMappingURL=main.css.map */

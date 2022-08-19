@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos</title>
+    <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="../scss/main.css">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
 </head>
-<body class="contenedor">
+<body class="contenedor" class="dark">
     <header>
         <a href="/index.html" class="brand"><h1>Visio Lamparas</h1></a>
             <svg height="32px" class="nav_btn nav_btn_open" id="navOpen" viewBox="0 0 32 32">
@@ -24,9 +24,9 @@
 
                 <div class=cardNav>
                     <div class="menuNav">
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="./pages/tienda.html">Tienda</a></li>
                         <li><a href="./pages/aMedida.html">A medida</a></li>
-                        <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
                         <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>                
                     </div>
                     <div>
@@ -41,23 +41,32 @@
         </nav>
     </header>
 
-<main>
-    <form id="formulario">
-        <input id="input-nombre" type="text" placeholder="Nombre">
-        <input id="input-apellido" type="text" placeholder="Apellido">
-        <input id="input-direccion" type="text" placeholder="Apellido">
-        <input id="input-email" type="text" placeholder="Email">
-        <input id="input-text" type="text" placeholder="text">
+    <main>
+        <div>
+            <button class="darkMode">Cambiar de modo</button>
+        </div>
+        <div>
+            <input type="text" class="form-control" id="input-nombre">
+            <input type="text" class="form-control" id="input-rol">
+            <button id="btn-guardar" class="btn btn-primary">guardar</button>
+        </div>
+        <form id="formulario">
+            <input id="input-nombre" class="form-type" type="text" placeholder="Nombre">
+            <input id="input-apellido" class="form-type" type="text" placeholder="Apellido">
+            <input id="input-direccion" class="form-type" type="text" placeholder="Direccion">
+            <input id="input-email" class="form-type" type="text" placeholder="Email">
+            <input id="input-text" class="form-type" type="text" placeholder="text">
+    
+            <button class="btnFormulario" type="submit" id="btn-submit">Submit</button>
+        </form>
+        
 
-        <button class="btn btn-primary" type="submit" id="btn-submit">Submit</button>
-    </form>
-</main>
-
+    </main>
 
     <footer>
         <hr class="cardFooter">
             <div class="logoFooter">
-                <img src="./multimedia/img/logoSitio2.png">
+                <img src="../multimedia/img/logoSitio2.png">
             </div>
             <hr></hr>
             <div class="footer-text"><a>Siguenos</a></div>
@@ -69,7 +78,7 @@
                 <hr></hr>
                 <div class="footer-text"><a>Ayuda</a></div>
                 <div class="footerlist">
-                        <li><a href="./contactanos.html">Contactanos</a></li>
+                        <li><span>Contacto</span></a></li>
                         <li><span>Cuidados y mantenimiento</span></a></li>
                         <li><span>Servicio Post-venta</span></a></li>
                         <li><span>¿Tienes una tienda?</span></a></li>
@@ -85,9 +94,7 @@
                     <div class="footerFinal"></div>
         </section>
     </footer>
-    <script src="../js/datos.js" type="module"></script>
-    <script src="../js/datosPortada.js" type="module"></script>
-    <script src="../js/app.js" type="module"></script>
+    <script src="../js/formulario.js" type="module"></script>
     <script src="../js/ModoOscuro.js" type="module"></script>
 </body>
 </html>

@@ -123,3 +123,9 @@
     opacity: 1;
     visibility: visible;
 }
+
+.btn-oculto{
+    opacity: 0;
+    visibility: inherit;
+    display:none;
+}

@@ -54,7 +54,6 @@ renderizado(filtrar);
 
 /*modal - inicio*/
 const modalContainer = document.querySelector("#modal-container")
-const modal = document.querySelector("#modal")
 const abrirModal = document.querySelector("#btn-modal-open")
 const cerrarModal = document.querySelector("#btn-modal-close")
 
@@ -64,7 +63,6 @@ abrirModal.addEventListener('click',()=>{
 
 cerrarModal.addEventListener('click',()=>{
     modalContainer.classList.remove('modal-container-active')
-    abrirModal = disabled;
 })
 /*modal - fin*/
 

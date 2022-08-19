@@ -25,28 +25,22 @@
                     <div class=cardNav>
                         <div class="menuNav">
                             <ul class="menu">
-                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="./pages/tienda.html">Tienda</a></li>
                                 <li><a href="./pages/aMedida.html">A medida</a></li>
                                 <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
                                 <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
-                            </ul>                
+                                <li class="carrito"><span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="30" data-height="30" button onclick="location.href='./pages/cardtWidget.html'"></span></li>
+                            </ul>
+                            <ul>
+                                <li><button class="darkMode">Modo oscuro</button></li>
+                            </ul>
                         </div>
-                        <div>
-                            <div class='cartwidget'>
-                                <div class='carrito'>
-                                    <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="50" data-height="50" button onclick="location.href='./pages/cardtWidget.html'"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                
                 </section>
             </nav>
     </header>
 
     <main>
-        <div>
-            <button class="darkMode">Cambiar de modo</button>
-        </div>
         <section class="cardfiltros">
             <div class="btnfiltros">
                 <ul class="listaFiltros">
@@ -117,6 +111,7 @@
         </section>
     </footer>
     <script src="../js/datos.js" type="module"></script>
+    <script src="../js/app.js" type="module"></script>
     <script src="../js/appsTienda.js" type="module"></script>
     <script src="../js/modoOscuro.js" type="module"></script>
 </body>
