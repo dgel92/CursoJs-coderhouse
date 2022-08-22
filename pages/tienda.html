@@ -13,7 +13,7 @@
 </head>
 <body class="contenedor">
     <header>
-        <a href="/index.html" class="brand"><h1>Visio Lamparas</h1></a>
+        <a href="../index.html" class="brand"><h1>Visio Lamparas</h1></a>
             <svg height="32px" class="nav_btn nav_btn_open" id="navOpen" viewBox="0 0 32 32">
                 <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
             </svg>
@@ -25,10 +25,10 @@
                     <div class=cardNav>
                         <div class="menuNav">
                             <ul class="menu">
-                                <li><a href="./pages/tienda.html">Tienda</a></li>
-                                <li><a href="./pages/aMedida.html">A medida</a></li>
-                                <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
-                                <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../pages/aMedida.html">A medida</a></li>
+                                <li><a href="../pages/sobreNosotros.html">Sobre nosotros</a></li>
+                                <li><a href="../pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
                                 <li class="carrito"><span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="30" data-height="30" button onclick="location.href='./pages/cardtWidget.html'"></span></li>
                             </ul>
                             <ul>
@@ -44,20 +44,22 @@
         <section class="cardfiltros">
             <div class="btnfiltros">
                 <ul class="listaFiltros">
-                    <li><button> filtrar por categorias</button>
+                    <li><button> Filtrar por categorias</button>
                         <ul>
-                            <li><button class="btn1LamparaDePie"> lamparas de pie</button></li>
-                            <li><button class="btn1LamparaEscritorio"> lamparas de escritorio</button></li>
+                            <li><button class="btn1LamparaDePie"> Lamparas de pie</button></li>
+                            <li><button class="btn1LamparaEscritorio"> Lamparas de escritorio</button></li>
+                            <li><button class="btnBorrarCategorias"> Borrar filtros</button></li>
                         </ul>
                     </li>        
                 </ul>
             </div>            
             <div class="btnfiltros">
                 <ul class="listaFiltros">
-                    <li><button> filtrar por precios</button>
+                    <li><button> Filtrar por precios</button>
                         <ul>
-                            <li><button class="btnMayorAMenor"> de mayor a menor</button></li>
-                            <li><button class="btnMenorAMayor"> de menor a mayor</button></li>
+                            <li><button class="btnMayorAMenor"> De mayor a menor</button></li>
+                            <li><button class="btnMenorAMayor"> De menor a mayor</button></li>
+                            <li><button class="btnBorrarCategorias"> Borrar filtros</button></li>
                         </ul>
                     </li>        
                 </ul>
@@ -65,12 +67,12 @@
         </section>
         <section id="section-box-tienda">
             <template>
-                <div class = product-card>
+                <div class = product-card  id="card-tienda">
                     <img src="imgUrl" class="card_ph"></img>
                         <h2 class="product-tittle">tittle</h2>
                         <h3 class="product-price">price</h3>
                         <p class="product-detail">detalle</p>
-                    <button id="btnAgregarAlCarrito" class="btn btn-primary">Agregar al carrito</button>
+                    <button id="btnVerMas" class="btn btn-primary-verMas">Ver mas</button>
                     <hr>
                 </div>
             </template>
@@ -111,7 +113,7 @@
         </section>
     </footer>
     <script src="../js/datos.js" type="module"></script>
-    <script src="../js/app.js" type="module"></script>
+    <script src="../js/navBar.js" type="module"></script>
     <script src="../js/appsTienda.js" type="module"></script>
     <script src="../js/modoOscuro.js" type="module"></script>
 </body>

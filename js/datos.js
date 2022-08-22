@@ -1,99 +1,22 @@
-export let arrayItems =[
-    {
-        id: 1,
-        tittle: 'lampara 1',
-        imgUrl: "../multimedia/img/lampara1.jpg",
-        categoria: "escritorio",
-        portada: true,
-        stock: 5,
-        price: 5820,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 2,
-        tittle: 'lampara 2',
-        imgUrl: '../multimedia/img/lampara2.jpg',
-        categoria: "escritorio",
-        stock: 8,
-        price: 6040,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 3,
-        tittle: 'lampara 3',
-        imgUrl: '../multimedia/img/lampara3.jpg',
-        categoria: "escritorio",
-        stock: 10,
-        price: 6790,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 4,
-        tittle: "lampara 4 ",
-        imgUrl: '../multimedia/img/lampara4.jpg',
-        categoria: "escritorio",
-        stock: 5,
-        price: 3095,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 5,
-        tittle: "lampara 5",
-        imgUrl: '../multimedia/img/lampara5.jpg',
-        categoria: "lampara de pie",
-        portada: true,
-        stock: 10,
-        price: 4899,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 6,
-        tittle: "lampara 6",
-        imgUrl: '../multimedia/img/lampara6.jpg',
-        categoria: "lampara de pie",
-        portada: false,
-        stock: 10,
-        price: 4899,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 7,
-        tittle: "lampara 7",
-        imgUrl: '../multimedia/img/lampara7.jpg',
-        categoria: "lampara de pie",
-        portada: false,
-        stock: 10,
-        price: 4899,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 8,
-        tittle: "lampara 8",
-        imgUrl: '../multimedia/img/lampara8.jpg',
-        categoria: "lampara de pie",
-        portada: false,
-        stock: 10,
-        price: 4899,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 9,
-        tittle: "lampara 9",
-        imgUrl: '../multimedia/img/lampara9.jpg',
-        categoria: "lampara de pie",
-        portada: false,
-        stock: 10,
-        price: 4899,
-        detalle: 'ñonñonñon',
-    },
-    {
-        id: 10,
-        tittle: "lampara 10",
-        imgUrl: '../multimedia/img/lampara10.jpg',
-        categoria: "lampara de pie",
-        portada: false,
-        stock: 10,
-        price: 4899,
-        detalle: 'ñonñonñon',
-    },
-]
+class Productosbase{
+    constructor ( id, tittle, imgUrl, categoria, portada, stock, price, detalle="ñonñonñon"){
+        this.id = id
+        this.tittle = tittle
+        this.imgUrl = imgUrl
+        this.categoria = categoria
+        this.portada = portada
+        this.stock = stock
+        this.price = price
+        this.detalle = detalle
+    }
+}
+
+export let arrayItems = []
+arrayItems.push(new Productosbase( 1,"lampara 1", "../multimedia/img/lampara1.jpg", "escritorio", true, 5, 5820, "..."))
+arrayItems.push(new Productosbase( 2,"lampara 2", "../multimedia/img/lampara2.jpg", "escritorio", false, 8, 6040, "..."))
+arrayItems.push(new Productosbase( 3,"lampara 3", "../multimedia/img/lampara3.jpg", "escritorio", false, 5, 3095, "..."))
+arrayItems.push(new Productosbase( 4,"lampara 4", "../multimedia/img/lampara4.jpg", "escritorio", false, 5, 3095, "..."))
+arrayItems.push(new Productosbase( 5,"lampara 5", "../multimedia/img/lampara5.jpg", "lampara de pie", true, 10, 4899, "..."))
+arrayItems.push(new Productosbase( 6,"lampara 6", "../multimedia/img/lampara6.jpg", "lampara de pie", false, 10, 4899, "..."))
+arrayItems.push(new Productosbase( 7,"lampara 7", "../multimedia/img/lampara7.jpg", "lampara de pie", false, 10, 4899, "..."))
+

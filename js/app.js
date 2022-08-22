@@ -1,36 +1,11 @@
 import {arrayItems} from "../js/datos.js";
 
-
-
-/*Funcion para navbar mobile - inicio*/
-function get(element) {
-    return document.getElementById(element);
-}
-let open = get("navOpen");
-let nav = get("nav");
-let close = get("navClose");
-
-open.addEventListener('click', function () {
-    nav.classList.add('nav-open');
-})
-close.addEventListener('click', function () {
-    nav.classList.remove('nav-open');
-})
-//Funcion para navbar mobile - fin//
-
-
-
-//filtrar productos de portada - inicio//
 const filtrar = arrayItems.filter((prod)=>{
     return prod.portada  == true
     })
     
     console.log(filtrar)
-//filtrar productos de portada - fin//
 
-
-
-/*Funcion card para productoss - Inicio*/
 const section = document.querySelector("#section-box-card")
 const temp = document.querySelector("template")
 const card = temp.content.querySelector("div")
@@ -48,11 +23,6 @@ function renderizado(array){
 
 renderizado(filtrar);
 
-/*Funcion card para productoss - Fin*/
-
-
-
-/*modal - inicio*/
 const modalContainer = document.querySelector("#modal-container")
 const abrirModal = document.querySelector("#btn-modal-open")
 const cerrarModal = document.querySelector("#btn-modal-close")
@@ -64,15 +34,13 @@ abrirModal.addEventListener('click',()=>{
 cerrarModal.addEventListener('click',()=>{
     modalContainer.classList.remove('modal-container-active')
 })
-/*modal - fin*/
 
-
-
-arrayItems.forEach((array) => {
-
-
-})
-
+const btnVermas = document.querySelector("#btnVerMas")
+btnVermas.addEventListener('click', () => {
+    setTimeout(function(){
+        location.href="../pages/itemDetailContainer.html";
+    }, 1000 );
+    })
 
 
 
@@ -110,7 +78,6 @@ const agregarCarrito = (e) =>{
     eventoBotones(btnAgregarAlCarrito)*/
 
 
-
 /*
     function cardWidget(){
     const carritoDeCompras=[]
@@ -145,22 +112,8 @@ const agregarCarrito = (e) =>{
         sectionCardtWidgwet.appendChild(clonarCard)
     }
     */
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function buscador(){
+    /*function buscador(){
     let buscador = prompt('ingresa el producto que quieres buscar');
     let prodIngresado = arrayProd.filter(producto => producto.nombre.includes(buscador));
     console.log(prodIngresado);
