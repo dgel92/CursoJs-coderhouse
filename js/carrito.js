@@ -15,3 +15,13 @@ class Carrito{
 }
 
 export default Carrito 
+
+
+const carrito = []
+
+const agregarAlCarrito = (id) =>{
+    const producto = stockProductos.fin( (prod) => prod.id === id)
+    carrito.push(producto)
+    console.log(carrito)
+
+}

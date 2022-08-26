@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../scss/main.css">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <script defer src="../js/modoOscuro.js" type="module"></script>
 
 </head>
 <body class="contenedor">
@@ -29,10 +28,12 @@
                                 <li><a href="../pages/aMedida.html">A medida</a></li>
                                 <li><a href="../pages/sobreNosotros.html">Sobre nosotros</a></li>
                                 <li><a href="../pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
-                                <li class="carrito"><span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="30" data-height="30" button onclick="location.href='./pages/cardtWidget.html'"></span></li>
-                            </ul>
-                            <ul>
-                                <li><button class="darkMode">Modo oscuro</button></li>
+                                <li class="carrito">
+                                    <button id="boton-carrito">
+                                        <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="30" data-height="30" button onclick="location.href='./pages/cardtWidget.html'"></span>
+                                        <span id="contadorCarrito">0</span>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>                
@@ -41,6 +42,7 @@
     </header>
 
     <main>
+
         <section class="cardfiltros">
             <div class="btnfiltros">
                 <ul class="listaFiltros">
@@ -65,20 +67,33 @@
                 </ul>
             </div>          
         </section>
-        <section id="section-box-tienda">
+
+        <section id="contenedor-productos" >
             <template>
-                <div class = product-card  id="card-tienda">
-                    <img src="imgUrl" class="card_ph"></img>
-                        <h2 class="product-tittle">tittle</h2>
-                        <h3 class="product-price">price</h3>
-                        <p class="product-detail">detalle</p>
-                    <button id="btnVerMas" class="btn btn-primary-verMas">Ver mas</button>
-                    <hr>
+                <div class="producto">
                 </div>
             </template>
         </section>
-        
 
+        <section>
+            <div class="modal-contenedor">
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                    <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                    <div id="carrito-contenedor">
+        
+                        <!-- <div class="productoEnCarrito">
+                            <p>Buzo 1</p>
+                            <p>Precio: $1200</p>
+                            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                        </div> -->
+        
+                    </div>
+                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                    <button id="vaciarCarrito" class="boton-eliminar">Vaciar carrito</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -112,9 +127,9 @@
                     <div class="footerFinal"></div>
         </section>
     </footer>
+    <script src="../js/modoOscuro.js" type="module"></script>
+    <script src="../js/appsTienda.js" type="module"></script>
     <script src="../js/datos.js" type="module"></script>
     <script src="../js/navBar.js" type="module"></script>
-    <script src="../js/appsTienda.js" type="module"></script>
-    <script src="../js/modoOscuro.js" type="module"></script>
 </body>
 </html>

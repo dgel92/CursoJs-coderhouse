@@ -13,7 +13,6 @@ let arrayprueba =[
     },
 ]
 
-
 let carrito = new Carrito('items')
 
 class CardtWidget {

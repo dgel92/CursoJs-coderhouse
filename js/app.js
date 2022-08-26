@@ -1,5 +1,6 @@
 import {arrayItems} from "../js/datos.js";
 
+
 const filtrar = arrayItems.filter((prod)=>{
     return prod.portada  == true
     })
@@ -13,15 +14,24 @@ const card = temp.content.querySelector("div")
 function renderizado(array){
     array.forEach((elm)=>{
         const cardClonar = card.cloneNode(card,true)
-        cardClonar.children[0].src = elm.imgUrl
-        cardClonar.children[1].innerText = elm.tittle
-        cardClonar.children[2].innerText = elm.price
-        cardClonar.children[3].innerText = elm.detalle
+        cardClonar.children[0].src = elm.img
+        cardClonar.children[1].innerText = elm.nombre
+        cardClonar.children[2].innerText = elm.precio
+        cardClonar.children[3].innerText = elm.descripcion
         section.appendChild(cardClonar)
+
+    const btnVerMas = document.querySelector("#btnVerMas")
+    btnVerMas.addEventListener('click', ()=>{
+    productoSeleccionado(product.id)
+    setTimeout(function(){
+        location.href= "../pages/itemDetailContainer.html";
+    }, 1000);
+        })
         })
     }
 
 renderizado(filtrar);
+
 
 const modalContainer = document.querySelector("#modal-container")
 const abrirModal = document.querySelector("#btn-modal-open")
@@ -42,10 +52,14 @@ btnVermas.addEventListener('click', () => {
     }, 1000 );
     })
 
-
-
-
-
+const prod = []
+    const productoSeleccionado = (id) =>{
+        const producto  = baseDatos.find((prod) => prod.id === id)
+        const productoJSON = JSON.stringify(producto)
+        localStorage.setItem('producto', productoJSON)
+        console.log(producto)
+        console.log(JSON.stringify(productoJSON))
+    }
 
 
 

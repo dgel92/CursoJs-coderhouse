@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso js - Daniel Gonzalez</title>
-    <link rel="stylesheet" href="../scss/main.css">
+    <link rel="stylesheet" href="../../scss/main.css">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <script defer src="../js/modoOscuro.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 
 </head>
 <body class="contenedor">
     <header>
-        <a href="/index.html" class="brand"><h1>Visio Lamparas</h1></a>
+        <a href="../index.html" class="brand"><h1>Visio Lamparas</h1></a>
             <svg height="32px" class="nav_btn nav_btn_open" id="navOpen" viewBox="0 0 32 32">
                 <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
             </svg>
@@ -25,14 +27,16 @@
                     <div class=cardNav>
                         <div class="menuNav">
                             <ul class="menu">
-                                <li><a href="./pages/tienda.html">Tienda</a></li>
-                                <li><a href="./pages/aMedida.html">A medida</a></li>
-                                <li><a href="./pages/sobreNosotros.html">Sobre nosotros</a></li>
-                                <li><a href="./pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
-                                <li class="carrito"><span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="30" data-height="30" button onclick="location.href='./pages/cardtWidget.html'"></span></li>
-                            </ul>
-                            <ul>
-                                <li><button class="darkMode">Modo oscuro</button></li>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../pages/aMedida.html">A medida</a></li>
+                                <li><a href="../pages/sobreNosotros.html">Sobre nosotros</a></li>
+                                <li><a href="../pages/cuidadosYMantenimiento.html">Cuidados y mantenimiento</a></li>
+                                <li class="carrito">
+                                    <button id="boton-carrito">
+                                        <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-width="30" data-height="30" button onclick="location.href='./pages/cardtWidget.html'"></span>
+                                        <span id="contadorCarrito">0</span>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>                
@@ -40,25 +44,37 @@
             </nav>
     </header>
 
-    <main>
-        <section id="section-box-tienda">
+
+    <main>    
+        <section id="section-box-card">
             <template>
-                <div class = product-card>
-                    <img src="imgUrl" class="card_ph"></img>
+                <div class = product-card class ='wrapper'>
+                    <img src="" class="card_ph"></img>
                         <h2 class="product-tittle">tittle</h2>
                         <h3 class="product-price">price</h3>
                         <p class="product-detail">detalle</p>
-                    <button id="btnVerMas" class="btn btn-primary-verMas">Ver mas</button>
-                    <hr>
+                    <br>
+                    <div class="widget-container" id="widget-container">
+                        <button class="btn resta"> - </button>
+                        <button class="btn suma"> + </button>
+                        <p id="cantidad"> x</p>
+                    </div>
+                        <button class="btn-primary" id="compra" id="activador">Comprar</button>
                 </div>
             </template>
         </section>
     </main>
 
+
+
+
+
+
+
     <footer>
         <hr class="cardFooter">
             <div class="logoFooter">
-                <img src="../multimedia/img/logoSitio2.png">
+                <img src="../../multimedia/img/logoSitio2.png">
             </div>
             <hr></hr>
             <div class="footer-text"><a>Siguenos</a></div>
@@ -86,9 +102,9 @@
                     <div class="footerFinal"></div>
         </section>
     </footer>
-    <script src="../js/datos.js" type="module"></script>
-    <script src="../js/app.js" type="module"></script>
-    <script src="../js/appsTienda.js" type="module"></script>
-    <script src="../js/modoOscuro.js" type="module"></script>
+    <script src="../js/itemDetailContainer.js" type="module"></script>
+    <script src="../js/cardtWidget.js" type="module"></script>
+    <script src="../js/navBar.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
