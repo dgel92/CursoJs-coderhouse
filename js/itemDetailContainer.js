@@ -2,6 +2,10 @@ const section = document.querySelector("#section-box-card")
 const temp = document.querySelector("template")
 const card = temp.content.querySelector("div")
 
+const DateTime = luxon.DateTime
+
+const dateNow = DateTime.now()
+console.log(dateNow)
 
 const prodItemDetail= [];
 datosLocalStorage();
@@ -39,3 +43,5 @@ Swal.fire({
     toast: true,
     })
 })
+
+/*luxon*/
