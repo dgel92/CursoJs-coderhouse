@@ -96,8 +96,23 @@ renderizado(baseDatos)
 
 
 
+const listaPosts = document.querySelector(".pruebaAPI")
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+    
+    const li = document.createElement('li')
+    li.innerHTML=`
+                <h3>${data.title}</h3>
+                <p>${data.userId}</p>
+    `
+    listaPosts.append(li)
+    })
 
 
+/*ajax y fetch 01:16 clase*/
 
 
 

@@ -12,7 +12,7 @@
 </head>
 <body class="contenedor" class="dark">
     <header>
-        <a href="../../index.html" class="brand"><h1>Visio Lamparas</h1></a>
+        <a href="../../index.html" class="brand"><h1>Vissio Lamparas</h1></a>
             <svg height="32px" class="nav_btn nav_btn_open" id="navOpen" viewBox="0 0 32 32">
                 <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
             </svg>
@@ -40,62 +40,89 @@
     </header>
 
     <main>
-        <div>
-            <input type="text" class="form-control" id="input-nombre">
-            <input type="text" class="form-control" id="input-rol">
-            <button id="btn-guardar" class="btn btn-primary">guardar</button>
-        </div>
-        
-        <div>
-            <h1>Contacto</h1>
-            <h3>Si estas interesado en encargar algo a medida, tienes un proyecto en mente que te gustaria contarnos o te apetece visitar nuestro taller, puedes escribirnos a xxx@xxx.com o rellena el siguiente formulario aqui abajo y nos pondremo en contacto contigo lo antes posible</h3>>
-        </div>
-        <form id="formulario">
-            <input id="input-nombre" class="form-type" type="text" placeholder="Nombre">
-            <input id="input-apellido" class="form-type" type="text" placeholder="Apellido">
-            <input id="input-direccion" class="form-type" type="text" placeholder="Direccion">
-            <input id="input-email" class="form-type" type="text" placeholder="Email">
-            <input id="input-text" class="form-type" type="text" placeholder="text">
-    
-            <button class="btnFormulario" type="submit" id="btn-submit">Submit</button>
-        </form>
-        
 
-    </main>
+<div>
+    <form id="form">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+            <input id="input-nombre" type="text" class="form-control" placeholder="Nombre" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Apellidos</label>
+            <input id="input-apellido" type="text" class="form-control" rows="3" placeholder="Apellido" name="last" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Telefono</label>
+            <input id="input-Telefono" type="text" class="form-control" rows="3" placeholder="Telefono" name="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+            <input id="input-email" type="email" class="form-control" rows="3" placeholder="Email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label" placeholder="message">Mensaje</label>
+            <input id="input-text" type="text" class="form-control" rows="3" name="message" required>
+        </div>
+        <input type="submit" id="button" class="btn btn-success" value="enviar mensaje" required>
+    </form>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <footer>
-        <hr class="cardFooter">
-            <div class="logoFooter">
-                <img src="../multimedia/img/logoSitio2.png">
+<script type="text/javascript"> emailjs.init('DMt0DVeYaA9-yVlOK')</script>
+</main>
+<footer>
+    <hr class="cardFooter">
+        <div class="logoFooter">
+            <img src="../multimedia/img/logoSitio2.png">
+        </div>
+        <hr></hr>
+        <div class="footer-text"><a>Siguenos</a></div>
+            <div class="footerMenu">
+                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="fa-brands:instagram" style="color: black;" data-width="24" data-height="24"></span></a></li>
+                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="simple-icons:vsco" style="color: black;" data-width="24" data-height="24"></span></a></li>
+                    <li class="icon-sm"><a href="#"><span class="iconify" data-icon="bi:twitter" style="color: black;" data-width="24" data-height="24"></span></a></li>                
             </div>
             <hr></hr>
-            <div class="footer-text"><a>Siguenos</a></div>
-                <div class="footerMenu">
-                        <li class="icon-sm"><a href="#"><span class="iconify" data-icon="fa-brands:instagram" style="color: black;" data-width="24" data-height="24"></span></a></li>
-                        <li class="icon-sm"><a href="#"><span class="iconify" data-icon="simple-icons:vsco" style="color: black;" data-width="24" data-height="24"></span></a></li>
-                        <li class="icon-sm"><a href="#"><span class="iconify" data-icon="bi:twitter" style="color: black;" data-width="24" data-height="24"></span></a></li>                
+            <div class="footer-text"><a>Ayuda</a></div>
+            <div class="footerlist">
+                    <li><span>Contacto</span></a></li>
+                    <li><span>Cuidados y mantenimiento</span></a></li>
+                    <li><span>Servicio Post-venta</span></a></li>
+                    <li><span>¿Tienes una tienda?</span></a></li>
                 </div>
                 <hr></hr>
-                <div class="footer-text"><a>Ayuda</a></div>
-                <div class="footerlist">
-                        <li><span>Contacto</span></a></li>
-                        <li><span>Cuidados y mantenimiento</span></a></li>
-                        <li><span>Servicio Post-venta</span></a></li>
-                        <li><span>¿Tienes una tienda?</span></a></li>
-                    </div>
-                    <hr></hr>
-                <div class="footer-text"><a>Importante</a></div>
-                <div class="footerlist">
-                        <li><span>Pedidos, envios y devoluciones</span></a></li>
-                        <li><span>Encargar a medida</span></a></li>
-                        <li><span>Aviso Legal</span></a></li>
-                        <li><span>Privacidad y Cookies</span></a></li>
-                    </div>
-                    <div class="footerFinal"></div>
-        </section>
-    </footer>
-    <script src="../../js/navBar.js" type="module"></script>
-    <script src="../../js/formulario.js" type="module"></script>
-    <script src="../../js/ModoOscuro.js" type="module"></script>
+            <div class="footer-text"><a>Importante</a></div>
+            <div class="footerlist">
+                    <li><span>Pedidos, envios y devoluciones</span></a></li>
+                    <li><span>Encargar a medida</span></a></li>
+                    <li><span>Aviso Legal</span></a></li>
+                    <li><span>Privacidad y Cookies</span></a></li>
+                </div>
+                <div class="footerFinal"></div>
+    </section>
+</footer>
+
 </body>
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_iqhspga';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+            btn.value = 'enviar mensaje';
+            alert('Mensaje enviado correctamente!');
+            }, (err) => {
+            btn.value = 'Enviar mensaje';
+            alert(JSON.stringify(err));
+            });
+        });
+    </script>
 </html>

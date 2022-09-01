@@ -1,0 +1,13 @@
+    
+[   
+    {
+        "id": 1,
+        "nombre": "lampara 1",
+        "img": "../multimedia/img/lampara1.jpg",
+        "categoria": "escritorio",
+        "portada": "true",
+        "stock": 5,
+        "precio": 5820,
+        "descripcion": "ñonñonñon"
+    }
+]

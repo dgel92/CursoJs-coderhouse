@@ -7,65 +7,70 @@ const filtrar = arrayItems.filter((prod)=>{
     
     console.log(filtrar)
 
-const section = document.querySelector("#section-box-card")
-const temp = document.querySelector("template")
-const card = temp.content.querySelector("div")
+const productosContainer = document.querySelector("#contenedor-productos")
 
-function renderizado(array){
-    array.forEach((elm)=>{
-        const cardClonar = card.cloneNode(card,true)
-        cardClonar.children[0].src = elm.img
-        cardClonar.children[1].innerText = elm.nombre
-        cardClonar.children[2].innerText = elm.precio
-        cardClonar.children[3].innerText = elm.descripcion
-        section.appendChild(cardClonar)
+function renderPortada(array){
+filtrar.forEach((producto) =>{
+    const div = document.createElement('div')
+    div.className = "product-card"
+    div.innerHTML = `
+                    <img src=${producto.img} class="card_ph" alt="">
+                    <h2 class="product-tittle">${producto.nombre}</h2>
+                    <h3 class="product-price">precio ${producto.precio}</h3>
+                    <p class="product-detail">${producto.descripcion}</p>
+                    <button id="verMas-${producto.id}" class=btn btn-primary>Ver mas</button>
+                    `
+        productosContainer.append(div)
 
-    const btnVerMas = document.querySelector("#btnVerMas")
+    const btnVerMas = document.querySelector(`#verMas-${producto.id}`)
     btnVerMas.addEventListener('click', ()=>{
-    productoSeleccionado(product.id)
+    productoSeleccionado(producto.id)
     setTimeout(function(){
         location.href= "../pages/itemDetailContainer.html";
     }, 1000);
         })
-        })
-    }
+}) 
+}
 
-renderizado(filtrar);
+renderPortada(2)
 
-
-const modalContainer = document.querySelector("#modal-container")
-const abrirModal = document.querySelector("#btn-modal-open")
-const cerrarModal = document.querySelector("#btn-modal-close")
-
-abrirModal.addEventListener('click',()=>{
-    modalContainer.classList.add('modal-container-active')
-})
-
-cerrarModal.addEventListener('click',()=>{
-    modalContainer.classList.remove('modal-container-active')
-})
-
-const btnVermas = document.querySelector("#btnVerMas")
-btnVermas.addEventListener('click', () => {
-    setTimeout(function(){
-        location.href="../pages/itemDetailContainer.html";
-    }, 1000 );
-    })
-
+//funcion para localstorage
 const prod = []
-    const productoSeleccionado = (id) =>{
-        const producto  = baseDatos.find((prod) => prod.id === id)
-        const productoJSON = JSON.stringify(producto)
-        localStorage.setItem('producto', productoJSON)
-        console.log(producto)
-        console.log(JSON.stringify(productoJSON))
-    }
+const productoSeleccionado = (id) =>{
+    const producto  = filtrar.find((prod) => prod.id === id)
+    const productoJSON = JSON.stringify(producto)
+    localStorage.setItem('producto', productoJSON)
+    console.log(producto)
+    console.log(JSON.stringify(productoJSON))
+}
+renderPortada(filtrar)
 
 
 
 
 
-
+/*<section>
+                <button id="btn-modal-open" class="btn btn-prymary btn-oculto"></button>
+                <div id="modal-container" class="modal-container modal-container-active">
+                    <div id="my-modal" class="my-modal">
+                        <h1>Vissio Lamparas</h1>
+                        <hr>
+                        <div class="modal-subtittle">
+                            <h4>En todos nuestros productos</h4>
+                            <h4>3, 6 y 12 cuotas s/interes</h4>
+                        </div>
+                        <div class="modal-subtittle2">
+                            <h4>Pagos en efectivo de contacto, 15% de descuento.</h4>
+                            <h4>Pagos por transferencia, 10% de descuento.</h4>
+                        </div>
+                        <div class="modal-subtittle3">
+                            <h5>Plazo de entrega en stock de 7 a 10 dias.</h5>
+                            <h5>Productos a pedido de 15 a 20 dias.</h5>
+                        </div>
+                        <button id="btn-modal-close" ref= ${item.id} class="btn btn-prymary">Cerrar</button>
+                    </div>    
+                </div>
+        </section>*/
 
 
 
