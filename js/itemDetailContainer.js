@@ -1,15 +1,7 @@
-import {arrayItems} from "../js/datos.js";
-
-const productosContainer = document.querySelector("#contenedor-productos")
 const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
 const botonAbrir = document.getElementById('boton-carrito')
 const botonCerrar = document.getElementById('carritoCerrar')
 const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
-const btnVaciar = document.querySelector('#boton-eliminar')
-const contadorCarrito = document.querySelector('#contadorCarrito')
-const carritoContainer = document.querySelector('#carrito-contenedor')
-
-
 
 botonAbrir.addEventListener('click', ()=>{
     contenedorModal.classList.toggle('modal-active')
@@ -28,6 +20,16 @@ modalCarrito.addEventListener('click', (event)=>{
     event.stopPropagation()
 })
 
+
+import {arrayItems} from "../js/datos.js";
+
+const productosContainer = document.querySelector("#contenedor-productos")
+const btnVaciar = document.querySelector('#vaciarCarrito')
+const contadorCarrito = document.querySelector('#contadorCarrito')
+const carritoContainer = document.querySelector('#carrito-contenedor')
+const btnEliminarproducto= document.querySelector('#botonEliminar')
+
+
 const prodItemDetail= [];
 datosLocalStorage();
 function datosLocalStorage (){
@@ -36,16 +38,6 @@ function datosLocalStorage (){
     prodItemDetail.push(nombre)
     console.log(prodItemDetail)
 }
-
-
-const eliminarDelCarrito = (id) => {
-    const productoAEliminar = carrito.find((prod) => prod.id == id)
-    const indice = carrito.indexOf(productoAEliminar)
-    carrito.splice(indice, 1)
-    console.log(carrito)
-
-}
-
 
 function renderItem(prodItemDetail){
     prodItemDetail.forEach((producto)=>{
@@ -72,21 +64,6 @@ renderItem(prodItemDetail);
 
 const carrito = []
 
-const renderCarrito = () =>{
-    carritoContainer.innerHTML=""
-    carrito.forEach((prod)=>{
-        const div =document.createElement('div')
-        div.className= "productoEnCarrito"
-        div.innerHTML = `        
-                        <p>${prod.nombre}</p>
-                        <p>precio: $ ${prod.precio}</p>
-                        <button onclick="elminarDelCarrito(${prod.id})"class="boton-eliminar"><iconify-icon icon="bx:trash"></iconify-icon></button>
-                        `            
-            carritoContainer.append(div)
-    })
-}
-
-
 const agregarProducto = (id) =>{
     const producto = arrayItems.find((prod) => prod.id === id)
     carrito.push(producto)
@@ -95,18 +72,32 @@ const agregarProducto = (id) =>{
     renderCarrito()
 }
 
+const renderCarrito = () =>{
+    carritoContainer.innerHTML=""
+
+    carrito.forEach((prod)=>{
+        const div =document.createElement('div')
+        div.className= "productoEnCarrito"
+        div.innerHTML = `
+                    <p>${prod.nombre}</p>
+                    <p>Precio: $${prod.precio}</p>
+                    <p>Cantidad: ${prod.cantidad}</p>
+                    <button id="botonEliminar"><iconify-icon icon="bi:trash"></iconify-icon></button>
+        `
+            carritoContainer.append(div)
+    })
+
+}
+
 const vaciarCarrito = () =>{
     carrito.length = 0
     renderCarrito()
+    console.log(carrito)
 }
 btnVaciar.addEventListener('click', vaciarCarrito)
 
 
-const actualizarCantidad = () => {
-    contadorCarrito.innerText = carrito.length
-}
-
-const botonComprar = document.querySelector("#compra")
+/*const botonComprar = document.querySelector("#compra")
 botonComprar.addEventListener('click', ()=>{
 Swal.fire({
     position: 'bottom-end',
@@ -116,7 +107,42 @@ Swal.fire({
     timer: 2000,
     toast: true,
     })
-})
+})*/
+
+renderCarrito()
+
+const eliminarDelCarrito = (id) => {
+    const producto = carrito.find((producto) => producto.id === id)
+    producto.cantidad -= 1
+    console.log(carrito)
+    if (producto.cantidad === 0) {
+        const indice = carrito.indexOf(producto)
+        carrito.splice(indice, 1)
+    }
+    console.log(carrito)
+    renderCarrito()
+}
+btnEliminarproducto.addEventListener('click', eliminarDelCarrito)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*min 57 afterclass*/

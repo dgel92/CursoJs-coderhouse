@@ -1,0 +1,49 @@
+.contacto-tittle{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: $vietnam;
+}
+
+.contacto-formulario{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.contacto-box{
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    font-size: 1rem;
+    width: auto;
+    margin: 20px;
+}
+
+.form-control{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.form-message{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 120px
+}
+
+.contacto-button{
+    position:relative;
+    right:-30%;
+    align-items: cente;
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+}

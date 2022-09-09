@@ -587,9 +587,11 @@ ul, ol {
 
 .brand {
   font-family: "Roboto", sans-serif;
-  color: white;
-  font-size: 0.8rem;
+  color: #292929;
+  font-size: 1.6rem;
   font-weight: 600;
+  background: white;
+  text-decoration: none;
 }
 
 header {
@@ -597,8 +599,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #cccaca;
-  border: 1px solid blue;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -609,7 +609,7 @@ header {
 }
 
 header .nav_btn {
-  fill: lightgray;
+  fill: #292929;
   display: block;
   cursor: pointer;
   width: 35px;
@@ -627,7 +627,7 @@ header nav {
   height: 100vh;
   width: 65%;
   background: black;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 1;
   display: none;
 }
@@ -647,10 +647,11 @@ header nav .menu {
   gap: 2em;
   margin-top: 15em;
   margin-left: 2em;
+  text-decoration: none;
 }
 
 header nav .menu li {
-  color: rgba(255, 255, 255, 0.808);
+  color: white;
   text-decoration: none;
   opacity: 0.8;
 }
@@ -667,22 +668,19 @@ header nav .menu li:hover {
   text-underline-offset: 4px;
 }
 
-header nav .carrito {
-  position: relative;
-  left: 12vh;
+header nav .menu li a {
+  text-decoration: none;
+  color: white;
 }
 
 header nav .darkMode {
-  position: relative;
-  bottom: -20vh;
-  left: 14vh;
-  font-size: .8rem;
+  background-color: white;
+  color: #292929;
 }
 
 header nav .darkMode:hover {
-  -webkit-text-decoration: 1px underline white;
-          text-decoration: 1px underline white;
-  text-underline-offset: 4px;
+  background-color: #8f8f8f;
+  color: #292929;
 }
 
 @media (min-width: 760px) {
@@ -829,5 +827,79 @@ header nav .darkMode:hover {
 
 .carousel-container {
   padding-top: 20px;
+}
+
+.carrousel-portd {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contacto-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  font-family: "Be Vietnam", sans-serif;
+}
+
+.contacto-formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 40px;
+}
+
+.contacto-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  font-size: 1rem;
+  width: auto;
+  margin: 20px;
+}
+
+.form-control {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.form-message {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 120px;
+}
+
+.contacto-button {
+  position: relative;
+  right: -30%;
+  -webkit-box-align: cente;
+      -ms-flex-align: cente;
+          align-items: cente;
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 40px;
 }
 /*# sourceMappingURL=main.css.map */

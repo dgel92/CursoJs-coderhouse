@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
+    <title>Contactanos</title>
     <link rel="stylesheet" href="../../scss/main.css">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
@@ -40,40 +40,45 @@
     </header>
 
     <main>
+<section>
+    <div class="contacto-tittle">
+        <h1>Contacto</h1></div>
+</section>
 
-<div>
-    <form id="form">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-            <input id="input-nombre" type="text" class="form-control" placeholder="Nombre" name="name" required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Apellidos</label>
-            <input id="input-apellido" type="text" class="form-control" rows="3" placeholder="Apellido" name="last" required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Telefono</label>
-            <input id="input-Telefono" type="text" class="form-control" rows="3" placeholder="Telefono" name="phone" required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Email</label>
-            <input id="input-email" type="email" class="form-control" rows="3" placeholder="Email" name="email" required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label" placeholder="message">Mensaje</label>
-            <input id="input-text" type="text" class="form-control" rows="3" name="message" required>
-        </div>
-        <input type="submit" id="button" class="btn btn-success" value="enviar mensaje" required>
-    </form>
-</div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript"> emailjs.init('DMt0DVeYaA9-yVlOK')</script>
+<section class="contacto-formulario">
+    <div>
+        <form id="form">
+            <div class="contacto-box">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input id="input-nombre" type="text" class="form-control" placeholder="Nombre" name="name" required>
+            </div>
+            <div class="contacto-box">
+                <label for="exampleFormControlTextarea1" class="form-label">Apellido</label>
+                <input id="input-apellido" type="text" class="form-control" rows="3" placeholder="Apellido" name="last" required>
+            </div>
+            <div class="contacto-box">
+                <label for="exampleFormControlTextarea1" class="form-label">Telefono</label>
+                <input id="input-Telefono" type="text" class="form-control" rows="3" placeholder="Telefono" name="phone" required>
+            </div>
+            <div class="contacto-box">
+                <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+                <input id="input-email" type="email" class="form-control" rows="3" placeholder="Email" name="email" required>
+            </div>
+            <div class="contacto-box">
+                <label for="exampleFormControlTextarea1" class="form-label" placeholder="message">Mensaje</label>
+                <input id="input-text" type="text" class="form-message" rows="3" name="message" required>
+            </div>
+            <input class="contacto-button" type="submit" id="button" class="btn btn-success" value="enviar mensaje" required>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init('DMt0DVeYaA9-yVlOK')</script>
+</section>
 </main>
 <footer>
     <hr class="cardFooter">
         <div class="logoFooter">
-            <img src="../multimedia/img/logoSitio2.png">
+            <img src="../multimedia/img/WhatsApp Image 2022-08-27 at 15.06.04.jpeg">
         </div>
         <hr></hr>
         <div class="footer-text"><a>Siguenos</a></div>

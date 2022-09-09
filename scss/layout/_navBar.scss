@@ -1,16 +1,16 @@
 .brand{
     font-family: $roboto;
-    color: white;
-    font-size: 0.8rem;
+    color: $clr-titulos;
+    font-size: 1.6rem;
     font-weight: 600;
+    background: white;
+    text-decoration: none;
 }
 
 
 header{
     position: relative;
     display:flex;
-    background: rgb(204, 202, 202);
-    border: 1px solid blue;
     justify-content: space-between;
     align-items: center;
     padding: 2em;
@@ -18,7 +18,7 @@ header{
 
 
     .nav_btn{
-        fill :$clr-fondo;
+        fill: $clr-titulos;
         display: block;
         cursor: pointer;
         width: 35px;
@@ -40,7 +40,7 @@ header{
         width: 65%;
 
         background: black;
-        opacity: 0.5;
+        opacity: 0.8;
         z-index: 1;
         display:none;
         
@@ -54,9 +54,10 @@ header{
             gap: 2em;
             margin-top:15em;
             margin-left: 2em;
+            text-decoration: none;
 
             li{
-                color: $clr-tipografia2;
+                color: white;
                 text-decoration: none;
                 opacity: 0.8;
 
@@ -72,24 +73,22 @@ header{
                     text-underline-offset: 4px;
 
                 }
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
-        .carrito{
-            position: relative;
-            left: 12vh;
-        }
-
-        .darkMode{
-            position: relative;
-            bottom: -20vh;
-            left: 14vh;
-            font-size: .8rem;
-
-            &:hover{
-                text-decoration: 1px underline white;
-                text-underline-offset: 4px;
-
-            }
+            .darkMode{
+                background-color: white;
+                color: $clr-titulos;
+    
+                &:hover{
+                    background-color: rgb(143, 143, 143);
+                    color: $clr-titulos;
+                }
+            
         }
     }
 
