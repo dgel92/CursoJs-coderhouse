@@ -96,17 +96,22 @@ header{
     @media(min-width: 760px){
         .nav_btn{
             display:none;
+            
+        }
+            nav {
+                all:unset;
+                
+                .menu{
+                    display:flex;
+                    flex-flow: row nowrap;
+                    margin: unset;
+                    gap: 1em;
+                }
+            
         }
 
-        nav {
-            all:unset;
-            
-            .menu{
-                display:flex;
-                flex-flow: row nowrap;
-                margin: unset;
-                gap: 1em;
-            }
+        .nav{
+            background-color: cadetblue;
         }
     }
 }

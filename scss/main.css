@@ -687,10 +687,18 @@ header nav .darkMode:hover {
   header .nav_btn {
     display: none;
   }
-  header nav {
+  header .navcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: lightgray;
+  }
+  header .navcontainer nav {
     all: unset;
   }
-  header nav .menu {
+  header .navcontainer nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

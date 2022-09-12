@@ -27,7 +27,7 @@ const productosContainer = document.querySelector("#contenedor-productos")
 const btnVaciar = document.querySelector('#vaciarCarrito')
 const contadorCarrito = document.querySelector('#contadorCarrito')
 const carritoContainer = document.querySelector('#carrito-contenedor')
-const btnEliminarproducto= document.querySelector('#botonEliminar')
+const btnEliminarproducto= document.querySelector('#eliminarProducto')
 
 
 const prodItemDetail= [];
@@ -72,30 +72,68 @@ const agregarProducto = (id) =>{
     renderCarrito()
 }
 
-const renderCarrito = () =>{
-    carritoContainer.innerHTML=""
+const elminarDelCarrito = (id) => {
+    const producto = carrito.find((prod) => prod.id === id)
+    producto.cantidad -= 1
 
-    carrito.forEach((prod)=>{
-        const div =document.createElement('div')
-        div.className= "productoEnCarrito"
+    if (producto.cantidad === 0) {
+        const indice = carrito.indexOf(producto)
+        carrito.splice(indice, 1)
+    }
+ 
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    toastEliminar()
+    renderCarrito()
+}
+
+const vaciarCarrito = () => {
+
+    Swal.fire(
+        {
+            title: 'Está seguro?',
+            text: 'Esto no es reversible',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, vaciar',
+            cancelButtonText: 'No, cancelar'
+        }
+    ).then( (result) => {
+        if (result.isConfirmed) {
+            carrito.length = 0
+            localStorage.setItem('carrito', JSON.stringify(carrito))
+        
+            Toastify({
+                text: 'Se vació el carrito',
+                time: 3000
+            }).showToast()
+
+            renderCarrito()
+        }
+    } )
+}
+
+btnVaciar.addEventListener('click', vaciarCarrito)
+
+const renderCarrito = () => {
+    carritoContainer.innerHTML = ""
+
+    carrito.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = "productoEnCarrito"
+
         div.innerHTML = `
                     <p>${prod.nombre}</p>
                     <p>Precio: $${prod.precio}</p>
                     <p>Cantidad: ${prod.cantidad}</p>
-                    <button id="botonEliminar"><iconify-icon icon="bi:trash"></iconify-icon></button>
+                    <button onclick="elminarDelCarrito(${prod.id})" class="boton-eliminar">delete</button>
         `
-            carritoContainer.append(div)
+
+        carritoContainer.append(div)
     })
 
+    actualizarCantidad()
+    actualizarTotal()
 }
-
-const vaciarCarrito = () =>{
-    carrito.length = 0
-    renderCarrito()
-    console.log(carrito)
-}
-btnVaciar.addEventListener('click', vaciarCarrito)
-
 
 /*const botonComprar = document.querySelector("#compra")
 botonComprar.addEventListener('click', ()=>{
@@ -111,18 +149,6 @@ Swal.fire({
 
 renderCarrito()
 
-const eliminarDelCarrito = (id) => {
-    const producto = carrito.find((producto) => producto.id === id)
-    producto.cantidad -= 1
-    console.log(carrito)
-    if (producto.cantidad === 0) {
-        const indice = carrito.indexOf(producto)
-        carrito.splice(indice, 1)
-    }
-    console.log(carrito)
-    renderCarrito()
-}
-btnEliminarproducto.addEventListener('click', eliminarDelCarrito)
 
 
 
