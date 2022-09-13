@@ -1,8 +1,12 @@
 .carousel-container{
-    padding-top: 20px;
+    display: flex;
+    width: 100%;
 }
 
 .carrousel-portd{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    display:flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 1rem;
 }

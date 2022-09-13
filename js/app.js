@@ -1,6 +1,5 @@
 import {arrayItems} from "../js/datos.js";
 
-
 const filtrar = arrayItems.filter((prod)=>{
     return prod.portada  == true
     })
@@ -15,10 +14,10 @@ filtrar.forEach((producto) =>{
     div.className = "product-card"
     div.innerHTML = `
                     <img src=${producto.img} class="card_ph" alt="">
-                    <h2 class="product-tittle">${producto.nombre}</h2>
-                    <h3 class="product-price">precio ${producto.precio}</h3>
-                    <p class="product-detail">${producto.descripcion}</p>
-                    <button id="verMas-${producto.id}" class=btn btn-primary>Ver mas</button>
+                    <div class="product-tittle">
+                    <h2>${producto.nombre}</h2>
+                    </div>
+                    <button id="verMas-${producto.id}" class="verMas">Ver mas</button>
                     `
         productosContainer.append(div)
 
@@ -26,13 +25,11 @@ filtrar.forEach((producto) =>{
     btnVerMas.addEventListener('click', ()=>{
     productoSeleccionado(producto.id)
     setTimeout(function(){
-        location.href= "../pages/itemDetailContainer.html";
+        location.href= "./pages/itemDetailContainer.html";
     }, 1000);
         })
 }) 
 }
-
-renderPortada(2)
 
 //funcion para localstorage
 const prod = []
@@ -53,13 +50,13 @@ divCarrousel.innerHTML = `
                 <div id="carouselExampleInterval"  class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="./multimedia/img/aristoteles-1.jpg" class="d-block w-100" alt="...">
+                    <img src="./multimedia/img/brand-carrousel.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./multimedia/img/aristoteles-1.jpg" class="d-block w-100" alt="...">
+                    <img src="./multimedia/img/brand-carrousel.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./multimedia/img/aristoteles-1.jpg" class="d-block w-100" alt="...">
+                    <img src="./multimedia/img/brand-carrousel.jpg" class="d-block w-100" alt="...">
                 </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">

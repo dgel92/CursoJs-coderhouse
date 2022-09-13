@@ -1,86 +1,31 @@
-let baseDatos =[
-    {
-    id: 1,
-    nombre: 'lampara 1',
-    img: "../multimedia/img/lampara1.jpg",
-    categoria: "escritorio",
-    portada: true,
-    stock: 5,
-    precio: 5820,
-    descripcion: 'ñonñonñon',
-    },
-    {
-    id: 2,
-    nombre: 'lampara 2',
-    img: "../multimedia/img/lampara2.jpg",
-    categoria: "escritorio",
-    portada: false,
-    stock: 8,
-    precio: 6040,
-    descripcion: 'ñonñonñon',
-    },
-    {
-    id: 3,
-    nombre: 'lampara 3',
-    img: "../multimedia/img/lampara3.jpg",
-    categoria: "escritorio",
-    portada: true,
-    stock: 5,
-    precio: 5040,
-    descripcion: 'ñonñonñon',
-    },
-    {
-    id: 4,
-    nombre: 'lampara 4',
-    img: "../multimedia/img/lampara4.jpg",
-    categoria: "escritorio",
-    portada: false,
-    stock: 8,
-    precio: 7040,
-    descripcion: 'ñonñonñon',
-    },
-    {
-    id: 5,
-    nombre: 'lampara 5',
-    img: "../multimedia/img/lampara5.jpg",
-    categoria: "lampara de pie",
-    portada: true,
-    stock: 18,
-    precio: 16040,
-    descripcion: 'ñonñonñon',
-    }
-]
+import {arrayItems} from "../js/datos.js";
 
-const productosContainer = document.querySelector('#contenedor-productos')
-const carritoContainer = document.querySelector('#carrito-contenedor')
-const btnVaciar = document.querySelector("#vaciarCarrito")
-const contadorCarrito = document.querySelector("#contadorCarrito")
-const contenedorFiltrar = document.querySelector("#contenedorFiltrar")
+const productosContainer = document.querySelector("#contenedor-productos")
 
 
-function renderizado(array){
-
-    baseDatos.forEach((product)=>{
+function renderPortada(array){
+    filtrar.forEach((producto) =>{
         const div = document.createElement('div')
         div.className = "product-card"
         div.innerHTML = `
-                        <img src=${product.img} class="card_ph" alt="">
-                        <h2 class="product-tittle">${product.nombre}</h2>
-                        <h3 class="product-price">precio ${product.precio}</h3>
-                        <p class="product-detail">${product.descripcion}</p>
-                        <button id="agregar-${product.id}" class=btn btn-primary>Ver mas</button>
+                        <img src=${producto.img} class="card_ph" alt="">
+                        <div class="product-tittle">
+                        <h2>${producto.nombre}</h2>
+                        </div>
+                        <button id="verMas-${producto.id}" class="verMas">Ver mas</button>
                         `
-        productosContainer.append(div)
-        
-        const btnVerMas = document.querySelector(`#agregar-${product.id}`)
+            productosContainer.append(div)
+    
+        const btnVerMas = document.querySelector(`#verMas-${producto.id}`)
         btnVerMas.addEventListener('click', ()=>{
-        productoSeleccionado(product.id)
+        productoSeleccionado(producto.id)
         setTimeout(function(){
-            location.href= "../pages/itemDetailContainer.html";
+            location.href= "./pages/itemDetailContainer.html";
         }, 1000);
             })
-        })
+    }) 
     }
+    
 
     //funcion para localstorage
     const prod = []
@@ -91,7 +36,7 @@ function renderizado(array){
         console.log(producto)
         console.log(JSON.stringify(productoJSON))
     }
-renderizado(baseDatos)
+renderPortada(arrayItems)
 
 
 

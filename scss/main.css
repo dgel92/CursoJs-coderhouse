@@ -390,107 +390,29 @@ p {
   padding: 10px 0px 10px 0px;
 }
 
-#section-box-card {
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+#contenedor-productos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  width: 100%;
-  height: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .product-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 2px solid red;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px 10px 10px 10px;
-}
-
-.product-card .card_ph {
-  width: 320px;
-  height: auto;
-}
-
-.product-card .product-tittle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 90%;
-  height: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 10px;
-  border: 2px solid blue;
-}
-
-.product-card .product-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-  top: -50px;
-  width: 90%;
-  height: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  margin-top: 10px;
-  border: 2px solid blue;
-}
-
-.product-card .product-detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-  top: -30px;
-  width: 90%;
-  height: 120px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 2px solid blueviolet;
-}
-
-.btn {
-  width: 120px;
-  height: 30px;
-}
-
-#formulario {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,22 +420,170 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: auto;
+  width: 380px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px 10px 10px;
+  border: 2px solid rgba(56, 55, 55, 0.582);
+  border-radius: 12px;
+}
+
+.product-card .card_ph {
+  width: 360px;
+  height: auto;
+}
+
+.product-card .product-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 355px;
+  height: 70px;
+}
+
+.product-card .product-tittle h2 {
+  font-size: 1.8rem;
+}
+
+.verMas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(35, 47, 95, 0.788);
+  border-radius: 12px;
+  color: white;
+}
+
+.verMas a:hover {
+  background-color: rgba(32, 39, 70, 0.884);
+  color: rgba(255, 255, 255, 0.788);
+}
+
+.img-tienda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-tienda a:hover {
+  opacity: 0.75;
+}
+
+.img-box1 {
+  padding: 20px 5px 20px 20px;
+}
+
+.img-box2 {
+  padding: 20px 5px 20px 20px;
+}
+
+.text-portada {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-portada h3 {
+  font-size: 2.3rem;
+  font-family: "Be Vietnam", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navlineaNegrita {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.navlineaNegrita p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  font-size: 0.9rem;
+}
+
+.navcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 18vh;
   padding: 20px;
-  border: 2px solid green;
+  color: black;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(221, 219, 219, 0.274);
 }
 
-.form-type {
-  margin-top: 5px;
-  margin-bottom: 5px;
+.navcontainer .brand {
+  color: black;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
 }
 
-.btnFormulario {
-  margin-top: 10px;
-  width: 60px;
+.navcontainer .menuNav {
+  display: Flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 120vh;
+  height: auto;
 }
 
-.cardfiltros {
+.navcontainer .menuNav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,194 +591,18 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid red;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
-.btnfiltros {
-  width: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-  font-size: .8rem;
-}
-
-ul, ol {
+.navcontainer .menuNav a {
+  margin-left: 50px;
   list-style: none;
-}
-
-.listaFiltros li a {
-  background-color: #222121b6;
-  border-radius: 5px;
-  color: white;
   text-decoration: none;
-  padding: 15px 10px;
-  display: block;
-  z-index: 1;
+  font-size: 1.3rem;
+  color: black;
 }
 
-.listaFiltros li a:hover {
-  background-color: #444343b6;
-}
-
-.listaFiltros > li {
-  float: left;
-}
-
-.listaFiltros li ul {
-  display: none;
-  position: absolute;
-  min-width: 140px;
-}
-
-.listaFiltros li:hover > ul {
-  display: block;
-}
-
-.listaFiltros li ul li {
-  position: relative;
-}
-
-.listaFiltros li ul li {
-  bottom: -140px;
-  top: 0px;
-}
-
-.dark {
-  background-color: rgba(78, 78, 78, 0.705);
-}
-
-.dark * {
-  color: white;
-}
-
-.brand {
-  font-family: "Roboto", sans-serif;
-  color: #292929;
-  font-size: 1.6rem;
-  font-weight: 600;
-  background: white;
-  text-decoration: none;
-}
-
-header {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2em;
-}
-
-header .nav_btn {
-  fill: #292929;
-  display: block;
-  cursor: pointer;
-  width: 35px;
-}
-
-header .nav_btn-close {
-  float: right;
-  margin: 2em 2em;
-}
-
-header nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 65%;
-  background: black;
-  opacity: 0.8;
-  z-index: 1;
-  display: none;
-}
-
-header nav.nav-open {
-  display: block;
-}
-
-header nav .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  gap: 2em;
-  margin-top: 15em;
-  margin-left: 2em;
-  text-decoration: none;
-}
-
-header nav .menu li {
-  color: white;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-header nav .menu li.active {
-  font-weight: 600;
-  opacity: 1;
-  letter-spacing: 0.05em;
-}
-
-header nav .menu li:hover {
-  -webkit-text-decoration: 1px underline white;
-          text-decoration: 1px underline white;
-  text-underline-offset: 4px;
-}
-
-header nav .menu li a {
-  text-decoration: none;
-  color: white;
-}
-
-header nav .darkMode {
-  background-color: white;
-  color: #292929;
-}
-
-header nav .darkMode:hover {
-  background-color: #8f8f8f;
-  color: #292929;
-}
-
-@media (min-width: 760px) {
-  header .nav_btn {
-    display: none;
-  }
-  header .navcontainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100px;
-    width: 100px;
-    background-color: lightgray;
-  }
-  header .navcontainer nav {
-    all: unset;
-  }
-  header .navcontainer nav .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    margin: unset;
-    gap: 1em;
-  }
+.navcontainer .menuNav a:hover {
+  color: #292828;
 }
 
 .cardFooter {
@@ -834,12 +728,23 @@ header nav .darkMode:hover {
 }
 
 .carousel-container {
-  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 .carrousel-portd {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 1rem;
 }
 
 .contacto-tittle {
