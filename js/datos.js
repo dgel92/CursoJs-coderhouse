@@ -360,7 +360,7 @@ export let arrayItems =[
     ColoresPantalla: 'Varios',
     },
     {
-    id: 24,
+    id: 25,
     nombre: 'Judith',
     img: "../multimedia/img/judith-1.jpg",
     categoria: "lampara de pie",
@@ -375,7 +375,7 @@ export let arrayItems =[
     ColoresPantalla: 'Negro, blanco, dorado, plateado y cobre (consultar por mas colores)',
     },
     {
-    id: 25,
+    id: 26,
     nombre: 'Jurgen',
     img: "../multimedia/img/jurgen-1.jpg",
     categoria: "lampara de pie",
@@ -390,7 +390,7 @@ export let arrayItems =[
     ColoresPantalla: 'nn',
     },
     {
-    id: 26,
+    id: 27,
     nombre: 'Maquiavelo',
     img: "../multimedia/img/maquiavelo-1.jpg",
     categoria: "lampara de pie",
@@ -405,7 +405,7 @@ export let arrayItems =[
     ColoresPantalla: 'Metal, dorado y negro',
     },
     {
-    id: 27,
+    id: 28,
     nombre: 'Martha',
     img: "../multimedia/img/martha-1.jpg",
     categoria: "colgante",
@@ -420,7 +420,7 @@ export let arrayItems =[
     ColoresPantalla: 'nn',
     },
     {
-    id: 28,
+    id: 29,
     nombre: 'Michel',
     img: "../multimedia/img/michel-1.jpg",
     categoria: "lampara de pie",
@@ -435,7 +435,7 @@ export let arrayItems =[
     ColoresPantalla: 'Negro, blanco y crudo (Consultar variedades)',
     },
     {
-    id: 29,
+    id: 30,
     nombre: 'Nasbaumm',
     img: "../multimedia/img/nasbaumm-1.jpg",
     categoria: "lampara de pie",
@@ -450,7 +450,7 @@ export let arrayItems =[
     ColoresPantalla: 'Negro, blanco y crudo (Consultar variedades)',
     },
     {
-    id: 30,
+    id: 31,
     nombre: 'Noam',
     img: "../multimedia/img/noam-1.jpg",
     categoria: "lampara de pie",
@@ -465,7 +465,7 @@ export let arrayItems =[
     ColoresPantalla: 'Negro',
     },
     {
-    id: 31,
+    id: 32,
     nombre: 'Pitagora',
     img: "../multimedia/img/pitagora-1.jpg",
     categoria: "lampara de pie",
@@ -480,7 +480,7 @@ export let arrayItems =[
     ColoresPantalla: 'Negro, blanco y crudo (Consultar variedades)',
     },
     {
-    id: 32,
+    id: 33,
     nombre: 'Platon',
     img: "../multimedia/img/platon-1.jpg",
     categoria: "lampara de pie",

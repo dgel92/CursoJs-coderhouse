@@ -1,127 +1,87 @@
 import {arrayItems} from "../js/datos.js";
 
-const productosContainer = document.querySelector("#contenedor-productos")
+const productosContainer = document.querySelector('#contenedor-productos')
 
+function renderizado(array){
 
-function renderPortada(array){
-    filtrar.forEach((producto) =>{
+    arrayItems.forEach((product)=>{
         const div = document.createElement('div')
         div.className = "product-card"
         div.innerHTML = `
-                        <img src=${producto.img} class="card_ph" alt="">
-                        <div class="product-tittle">
-                        <h2>${producto.nombre}</h2>
-                        </div>
-                        <button id="verMas-${producto.id}" class="verMas">Ver mas</button>
+                        <img src=${product.img} class="card_ph" alt="">
+                        <h2 class="product-tittle">${product.nombre}</h2>
+                        <h3 class="product-price">precio ${product.precio}</h3>
+                        <p class="product-detail">alto: ${product.alto} - diametro: ${product.diametro}</p>
+                        <p class="product-detail">Pantallas: ${product.pantallas}</p>
+                        <button id="agregar-${product.id}" class=btn btn-primary>Ver mas</button>
                         `
-            productosContainer.append(div)
-    
-        const btnVerMas = document.querySelector(`#verMas-${producto.id}`)
+        productosContainer.append(div)
+        
+        const btnVerMas = document.querySelector(`#agregar-${product.id}`)
         btnVerMas.addEventListener('click', ()=>{
-        productoSeleccionado(producto.id)
+        productoSeleccionado(product.id)
         setTimeout(function(){
-            location.href= "./pages/itemDetailContainer.html";
+            location.href= "../pages/itemDetailContainer.html";
         }, 1000);
             })
-    }) 
+        })
     }
-    
+
+renderizado(arrayItems)
 
     //funcion para localstorage
     const prod = []
     const productoSeleccionado = (id) =>{
-        const producto  = baseDatos.find((prod) => prod.id === id)
+        const producto  = arrayItems.find((prod) => prod.id === id)
         const productoJSON = JSON.stringify(producto)
         localStorage.setItem('producto', productoJSON)
         console.log(producto)
         console.log(JSON.stringify(productoJSON))
     }
-renderPortada(arrayItems)
 
-
-
-
-const listaPosts = document.querySelector(".pruebaAPI")
-
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data)
-    
-    const li = document.createElement('li')
-    li.innerHTML=`
-                <h3>${data.title}</h3>
-                <p>${data.userId}</p>
-    `
-    listaPosts.append(li)
-    })
-
-
-/*ajax y fetch 01:16 clase*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 const btnLamparaDePie = document.querySelector(".btn1LamparaDePie")
 btnLamparaDePie.addEventListener('click', ()=>{
-    const filtrarLamparaPie = baseDatos.filter((prod)=>{
+    const filtrarLamparaPie = arrayItems.filter((prod)=>{
     return prod.categoria == "lampara de pie";
     })
     console.log(filtrarLamparaPie)
-    contenedorFiltrar.innerHTML = ""
+    productosContainer.innerHTML = "";
     renderizado(filtrarLamparaPie);
 })
 
 const btnLamparaEscritorio = document.querySelector(".btn1LamparaEscritorio")
 btnLamparaEscritorio.addEventListener('click', ()=>{
-    const filtrarLamparaEscritorio = baseDatos.filter((prod)=>{
+    const filtrarLamparaEscritorio = arrayItems.filter((prod)=>{
         return prod.categoria == "escritorio"
     })
     console.log(filtrarLamparaEscritorio)
-    contenedorFiltrar.innerHTML = ""
+    productosContainer.innerHTML = "";
     renderizado(filtrarLamparaEscritorio)
 })
 
 const btnMayorAMenor = document.querySelector(".btnMayorAMenor")
     btnMayorAMenor.addEventListener('click', ()=>{
-    const filrarMayor = baseDatos.sort(( a, b) => b.price - a.price)
+    const filrarMayor = arrayItems.sort(( a, b) => b.precio - a.precio)
     console.log(filrarMayor)
+    productosContainer.innerHTML = ""
     renderizado(filrarMayor)
 })
 
 const btnMenorAMayor = document.querySelector(".btnMenorAMayor")
     btnMenorAMayor.addEventListener('click', ()=>{
-        const filrarMenor = baseDatos.sort(( a, b) => a.price - b.price)
+        const filrarMenor = arrayItems.sort(( b, a) => b.precio - a.precio)
         console.log(filrarMenor)
+        productosContainer.innerHTML = ""
         renderizado(filrarMenor)
 })
 
 const btnBorrarCategorias = document.querySelector(".btnBorrarCategorias")
 btnBorrarCategorias.addEventListener('click', ()=>{
-    const borrarFiltros = baseDatos
-    console.log(borrarFiltros)
-    renderizado(borrarFiltros)
+    const borrarCategoria = arrayItems
+    console.log(borrarCategoria);
+    productosContainer.innerHTML = ""
+    renderizado(borrarCategoria)
 })
-*/
-
-
-
-
-
-
-
 
 
 
@@ -148,6 +108,26 @@ btnBorrarCategorias.addEventListener('click', ()=>{
 
 
 
+
+
+
+const listaPosts = document.querySelector(".pruebaAPI")
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+    
+    const li = document.createElement('li')
+    li.innerHTML=`
+                <h3>${data.title}</h3>
+                <p>${data.userId}</p>
+    `
+    listaPosts.append(li)
+    })
+
+
+/*ajax y fetch 01:16 clase*/
 
 
 
