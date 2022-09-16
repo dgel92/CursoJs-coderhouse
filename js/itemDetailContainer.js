@@ -80,7 +80,7 @@ const elminarDelCarrito = (id) => {
         const indice = carrito.indexOf(producto)
         carrito.splice(indice, 1)
     }
- 
+
     localStorage.setItem('carrito', JSON.stringify(carrito))
     toastEliminar()
     renderCarrito()
