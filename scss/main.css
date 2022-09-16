@@ -815,4 +815,30 @@ p {
   margin-bottom: 10px;
   height: 40px;
 }
+
+.btnfiltros {
+  display: Flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: auto;
+  height: auto;
+  margin-top: 40px;
+  padding-right: 50px;
+}
+
+.btnfiltros .listaFiltros {
+  padding-right: 50px;
+}
+
+#contenedor-productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card {
+  margin-bottom: 30px;
+}
 /*# sourceMappingURL=main.css.map */

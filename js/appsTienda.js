@@ -20,6 +20,7 @@ function renderizado(array){
         const btnVerMas = document.querySelector(`#agregar-${product.id}`)
         btnVerMas.addEventListener('click', ()=>{
         productoSeleccionado(product.id)
+        console.log(productoSeleccionado)
         setTimeout(function(){
             location.href= "../pages/itemDetailContainer.html";
         }, 1000);
@@ -29,7 +30,6 @@ function renderizado(array){
 
 renderizado(arrayItems)
 
-    //funcion para localstorage
     const prod = []
     const productoSeleccionado = (id) =>{
         const producto  = arrayItems.find((prod) => prod.id === id)
@@ -46,7 +46,7 @@ btnLamparaDePie.addEventListener('click', ()=>{
     })
     console.log(filtrarLamparaPie)
     productosContainer.innerHTML = "";
-    renderizado(filtrarLamparaPie);
+    renderizado(filtrarLamparaPie)
 })
 
 const btnLamparaEscritorio = document.querySelector(".btn1LamparaEscritorio")
@@ -85,7 +85,7 @@ btnBorrarCategorias.addEventListener('click', ()=>{
 
 
 
-
+/*minuto 39 after array y funciones de orden superior*/
 
 
 

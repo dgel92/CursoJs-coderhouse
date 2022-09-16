@@ -1,0 +1,22 @@
+.btnfiltros{
+    display:Flex;
+    flex-direction: row-reverse;
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    padding-right: 50px;
+
+
+    .listaFiltros{
+        padding-right:50px
+    }
+}
+
+#contenedor-productos{
+    display:flex;
+}
+
+
+.product-card{
+    margin-bottom: 30px;
+}
